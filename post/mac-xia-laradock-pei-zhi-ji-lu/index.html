@@ -1,0 +1,519 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Mac 下 Laradock 配置记录 - Summer Lee</title>
+<link rel="shortcut icon" href="https://cafe.summer.today/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://cafe.summer.today/media/css/tailwind.css">
+<link rel="stylesheet" href="https://cafe.summer.today/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Mac 下 Laradock 配置记录 - Summer Lee - Atom Feed" href="https://cafe.summer.today/atom.xml">
+
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EX4CEGLQEE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-EX4CEGLQEE');
+  </script>
+    
+
+  <meta name="description" content="LaraDock简介
+LaraDock致力于简化创建开发环境过程，能够帮你在Docker上快速搭建Laravel应用。 就像Laravel Homestead一样，只不过用Docker替换了Vagrant。它预包装了Docker镜像，为我们..." />
+  <meta property="og:title" content="Mac 下 Laradock 配置记录 - Summer Lee">
+  <meta property="og:description" content="LaraDock简介
+LaraDock致力于简化创建开发环境过程，能够帮你在Docker上快速搭建Laravel应用。 就像Laravel Homestead一样，只不过用Docker替换了Vagrant。它预包装了Docker镜像，为我们..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://cafe.summer.today/post/mac-xia-laradock-pei-zhi-ji-lu/" />
+  <meta property="og:image" content="https://cafe.summer.today/images/avatar.png">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="Mac 下 Laradock 配置记录 - Summer Lee">
+  <meta name="twitter:description" content="LaraDock简介
+LaraDock致力于简化创建开发环境过程，能够帮你在Docker上快速搭建Laravel应用。 就像Laravel Homestead一样，只不过用Docker替换了Vagrant。它预包装了Docker镜像，为我们...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://cafe.summer.today/post/mac-xia-laradock-pei-zhi-ji-lu/">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+ 
+  
+    <link rel="stylesheet" href="https://cafe.summer.today/media/css/prism-atom-dark.css">
+  
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://cafe.summer.today" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      Summer Lee
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          Mac 下 Laradock 配置记录
+        </h1>
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4">2017-08-23 · 7 min read</div>
+          
+            <a href="https://cafe.summer.today/tag/o0lMFSLe0/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              Laravel
+            </a>
+          
+            <a href="https://cafe.summer.today/tag/yg2pV4gbwU/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              Docker
+            </a>
+          
+            <a href="https://cafe.summer.today/tag/13au7W3iDz/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              LaraDock
+            </a>
+          
+        </div>
+        <div class="markdown mb-8" v-pre>
+          <h3 id="laradock简介">LaraDock简介</h3>
+<p>LaraDock致力于简化创建<a href="http://laravelacademy.org/tags/%e5%bc%80%e5%8f%91%e7%8e%af%e5%a2%83">开发环境</a>过程，能够帮你在<a href="http://laravelacademy.org/tags/docker">Docker</a>上快速搭建<a href="http://laravelacademy.org/tags/laravel">Laravel</a>应用。 就像Laravel <a href="http://laravelacademy.org/tags/homestead">Homestead</a>一样，只不过用Docker替换了<a href="http://laravelacademy.org/tags/vagrant">Vagrant</a>。它预包装了Docker镜像，为我们提供了一站式的开发环境，而不需要再去在本地机器<a href="http://laravelacademy.org/tags/%e5%ae%89%e8%a3%85">安装</a>PHP、Nginx、MySQL以及其他任何开发过程中需要的软件。</p>
+<!--more-->
+<h4 id="支持的软件">支持的软件</h4>
+<ul>
+<li>数据库引擎:
+<ul>
+<li>MySQL</li>
+<li>PostgreSQL</li>
+<li>MariaDB</li>
+<li>MongoDB</li>
+<li>Neo4j</li>
+</ul>
+</li>
+<li>缓存引擎:
+<ul>
+<li>Redis</li>
+<li>Memcached</li>
+</ul>
+</li>
+<li>PHP 服务器:
+<ul>
+<li>NGINX</li>
+<li>Apache2</li>
+<li>Caddy</li>
+</ul>
+</li>
+<li>PHP 编译工具:
+<ul>
+<li>PHP-FPM</li>
+<li>HHVM</li>
+</ul>
+</li>
+<li>消息队列系统:
+<ul>
+<li>Beanstalkd (+ Beanstalkd Console)</li>
+</ul>
+</li>
+<li>工具:
+<ul>
+<li>Workspace (PHP7-CLI, Composer, Git, Node, Gulp, SQLite, Vim, Nano, cURL…) &gt;如果你找不到你需要的软件，构建它然后把它添加到这个列表。</li>
+</ul>
+</li>
+</ul>
+<h4 id="什么是docker">什么是Docker</h4>
+<p>Docker是一个开源的引擎，可以轻松的为任何应用创建一个轻量级的、可移植的、自给自足的容器。开发者在笔记本上编译测试通过的容器可以批量地在生产环境中部署，包括VMs（虚拟机）、bare metal、OpenStack 集群和其他的基础应用平台。</p>
+<h4 id="docker-vs-vagrant">Docker vs Vagrant</h4>
+<p>从时间上来看，Vagrant启动虚拟机需要数分钟，而Docker只需数秒；从体量上来看，Vagrant提供的是完整的虚拟机，而Docker提供的是轻量级的虚拟容器，这些虚拟容器共享同一个内核并且允许在独立进程中运行；此外，从应用范围来说，Vagrant只能用于开发环境，而Docker即可用于开发环境也可用于生产环境。</p>
+<h4 id="laradock-vs-homestead">LaraDock vs Homestead</h4>
+<p>类比Docker和Vagrant，LaraDock和Homestead都能够为我们提供完整的虚拟开发环境，LaraDock是用于管理控制Docker的工具，而Homestead是用于管理控制完整虚拟机（如VirtualBox+Ubuntu）的工具，LaraDock运行速度比Homestead更快。</p>
+<h3 id="环境搭建">环境搭建</h3>
+<h4 id="安装依赖">安装依赖</h4>
+<p>配置LaraDock前需要先安装</p>
+<ul>
+<li><code>Docker</code></li>
+<li><code>Git</code></li>
+</ul>
+<p>通过<code>homebrew</code>安装<code>docker</code>，或者也可以去官网下载最新的安装包</p>
+<pre><code class="language-shell">$ brew cask install docker
+</code></pre>
+<p>详细安装步骤以及镜像加速器配置可访问<a href="https://yeasy.gitbooks.io/docker_practice/content/install/mac.html">Docker—从入门到实战</a>进行学习</p>
+<p>通过<code>homebrew</code>安装<code>git</code></p>
+<pre><code class="language-shell">$ brew install git
+</code></pre>
+<p>git具体使用可以参考<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">廖雪峰老师的Git教程</a></p>
+<h4 id="安装laradock">安装LaraDock</h4>
+<p>如果系统尚未安装Laravel应用，需要从头开始搭建全新的环境，可以在系统任意位置克隆Github仓库到本地：</p>
+<pre><code class="language-shell">$ git clone https://github.com/LaraDock/laradock.git
+</code></pre>
+<p>如果之前已经安装了Laravel，也可以在Laravel应用根目录（即Laravel应用<strong>同级</strong>目录下）下克隆上述Github仓库代码。</p>
+<h4 id="启动laradock">启动LaraDock</h4>
+<p>进入<code>laradock</code>目录并生成环境的配置文件（默认<code>.env</code>配置文件是不存在的，即直接启动docker容器会导致失败）</p>
+<pre><code class="language-shell">$ cd laradock
+$ cp env-example .env
+</code></pre>
+<p>运行命令启动<code>Nginx</code>和<code>MySQL</code>容器（镜像不存在的话会自动下载到本地），<code>-d</code>选项表示容器创建后在后台运行</p>
+<pre><code class="language-shell">$ docker-compose up -d nginx mysql
+</code></pre>
+<p>可以从以下列表选择自己的容器组合</p>
+<pre><code class="language-shell">nginx, hhvm, php-fpm, mysql, redis, postgres, mariadb, neo4j, mongo, apache2, caddy, memcached, beanstalkd, beanstalkd-console, workspace
+</code></pre>
+<blockquote>
+<p>注：<code>workspace</code> 和 <code>php-fpm</code> 将运行在大部分实例中, 所以不需要在 <code>up</code> 命令中加上它们。</p>
+</blockquote>
+<p>启动之后，本地环境的<code>laradock</code>所在目录就与docker容器的<code>/var/www</code>目录形成映射，可以使用如下命令进入<code>workspace</code>容器，执行安装<code>Laravel</code>或其他命令操作</p>
+<pre><code class="language-shell">$ docker-compose exec --user=laradock workspace bash
+</code></pre>
+<p>以<code>laradock</code>用户身份进入容器。</p>
+<p>进入后在<code>/var/www</code>目录下执行命令安装<code>laravel</code></p>
+<pre><code class="language-shell">$ composer create-project laravel/laravel &lt;项目名&gt;
+// 或者
+$ composer global require &quot;laravel/installer&quot;
+$ laravel new &lt;项目名&gt;
+</code></pre>
+<h5 id="web服务器">web服务器</h5>
+<p>web服务器可以根据需要选择apache2/nginx/caddy</p>
+<p>caddy在创建容器的时候调用<code>laradock/caddy/Dockfile</code>会报错</p>
+<pre><code class="language-shell">ERROR: for laradock_caddy_1  Cannot restart container 1e04448556d8eb06814155f9d77cfc7cef7c33048dbfc64d6035d172a663ff2c: driver failed programming external connectivity on endpoint laradock_caddy_1 (4bc556f7caa7c4657d75c1ab8fab90a28832b8b52c9be4ee3db245dcaa402ff2): Bind for 0.0.0.0:443 failed: port is already allocated
+ERROR: for caddy  Cannot start service caddy: oci runtime error: container_linux.go:262: starting container process caused &quot;chdir to cwd (\&quot;/var/www/public\&quot;) set in config.json failed: no such file or directory&quot;
+</code></pre>
+<p>这是因为在创建容器的时候<code>Dockfile</code>中默认的<code>WORKDIR /var/www/public</code>使<code>caddy</code>运行在此目录下，但实际上工作路径应该是<code>/var/www</code>，所以会导致找不到目录的错误</p>
+<p>修改<code>laradock/caddy/Dockfile</code>内容即可</p>
+<pre><code class="language-shell"># WORKDIR /var/www/public
+WORKDIR /var/www
+</code></pre>
+<p>浏览器访问http://localhost显示cannot find server</p>
+<p>查看容器运行状态，发现caddy的state为<code>Exit 1</code></p>
+<figure data-type="image" tabindex="1"><img src="https://cafe.summer.today/post-images/1662665475671.png" alt="" loading="lazy"></figure>
+<p>查看docker-compose日志</p>
+<pre><code class="language-shell">$ docker-compose logs
+</code></pre>
+<figure data-type="image" tabindex="2"><img src="https://cafe.summer.today/post-images/1662665486549.png" alt="" loading="lazy"></figure>
+<p>可以看到原因是因为配置文件中[laradock.demo]这个域名是没有进行审核的，或者一个不存在的域名。</p>
+<p>解决办法：</p>
+<ol>
+<li>
+<p>删除配置文件<code>Caddyfile</code>中laradock.demo的配置内容</p>
+</li>
+<li>
+<p>当Caddy检测到站点名符合下列条件时会<code>自动使用Let's Encrypt脚本来为站点添加HTTPS支持</code>，并且自动监听80与443端口：</p>
+<ul>
+<li>主机名不可为空并且没有localhost与IP地址</li>
+<li>端口号未明确指定为80</li>
+<li>Scheme未明确指定为http</li>
+<li>TLS未被关闭</li>
+<li>未指明证书</li>
+</ul>
+<p>那么我们可以通过第三条，将配置文件<code>Caddyfile</code>中的主机名<code>laradock.demo</code>改为<code>http://laradock.demo</code>，这样Caddy就不会检测此站点是否存在。</p>
+<p>如果是配置虚拟主机，则需要修改<code>hosts</code>文件，将<code>127.0.0.1</code>指向添加的域名</p>
+<pre><code class="language-shell">127.0.0.1   laradock.demo
+</code></pre>
+</li>
+</ol>
+<h3 id="应用配置">应用配置</h3>
+<p>安装完成后，需要修改<code>laradock</code>目录下相应web服务器的配置文件，将web服务器的web根目录指向<code>&lt;项目名&gt;/public</code>目录，该目录下的<code>index.php</code>文件将作为前端控制器，所有HTTP请求都会通过该文件进入应用。</p>
+<p>例如我创建了名为<code>coolapp</code>的项目，修改Nginx配置文件</p>
+<pre><code class="language-shell">// 启动容器
+# docker-compose up -d ngnix mysql redis
+// 进入容器
+# docker-compose exec --user=laradock workspace bash
+$ pwd
+/var/www
+$ composer global require &quot;laravel/installer&quot;
+$ laravel new coolapp
+$ ls
+coolapp laradock
+$ cd laradock
+$ vim nginx/sites/default.conf
+
+// 修改其中的
+server_name localhost;
+root /var/www/public;
+// 为
+server_name coolapp;
+root /var/www/coolapp/public;
+
+// 保存退出vim
+// 退出容器
+$ exit
+
+// 重启容器
+# docker-compose restart
+</code></pre>
+<p>完成后打开浏览器访问<a href="http://localhost">http://localhost</a>出现<code>laravel</code>页面即可。</p>
+<h3 id="参考">参考</h3>
+<p>[1]: http://www.jianshu.com/p/3b564f452625 《在Mac上安装和使用Docker搭建laravel环境》<br>
+[2]: http://laravelacademy.org/post/6569.html 《基于 LaraDock 在 Docker 中快速构建 Laravel 应用系列教程 —— 搭建开发环境》<br>
+[3]: https://zhuanlan.zhihu.com/p/25850060 《清新脱俗的 Web 服务器 Caddy》<br>
+[4]: http://tonybai.com/2015/06/04/caddy-a-web-server-in-go/ 《Caddy，一个用Go实现的Web Serve》<br>
+[5]: http://blog.csdn.net/wanghailong041/article/details/52162293 《Docker-compose命令详解》<br>
+[6]: https://www.gitbook.com/book/yeasy/docker_practice/details 《Docker — 从入门到实践》<br>
+[7]: http://blog.newbmiao.com/2017/03/14/laradock-in-action.html 《laradock开发实践》<br>
+[8]: https://yq.aliyun.com/articles/59006 《Caddy网页服务器简单部署实践》</p>
+
+        </div>
+        <!-- Share to Twitter, Weibo, Telegram -->
+        <div class="flex items-center">
+          <div class="mr-4 flex items-center">
+            <i class="ri-share-forward-line text-gray-500"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-blue-500 hover:bg-blue-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTwitter">
+            <i class="ri-twitter-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-red-500 hover:bg-red-100 dark:hover:bg-gray-600 inline-flex" @click="shareToWeibo">
+            <i class="ri-weibo-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-indigo-500 hover:bg-indigo-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTelegram">
+            <i class="ri-telegram-line"></i>
+          </div>
+        </div>
+      </div>
+
+      
+        
+
+        
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/disqusjs@1.3/dist/disqusjs.css">
+<script type="application/javascript" src="https://cdn.jsdelivr.net/npm/disqusjs@1.3/dist/disqus.js"></script>
+<script type="application/javascript" src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+<script type="application/javascript" src="https://cdn.jsdelivr.net/npm/whatwg-fetch@3.0.0/dist/fetch.umd.min.js"></script>
+
+<div id="disqus_thread"></div>
+
+<script type="application/javascript">
+
+var options = {
+  shortname: 'summer-lee',
+  apikey: 'slwZK7rHlYsCAVg9tavZ4TBOR8efGDfR1OjXfrUNwgRk7k9EpulkeMT5hyPd8god',
+}
+if ('https://disqus.lanruo942.workers.dev/api/') {
+  options.api = 'https://disqus.lanruo942.workers.dev/api/'
+}
+var dsqjs = new DisqusJS(options)
+
+</script>
+
+        
+      
+
+      
+
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+</footer>
+    </div>
+
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#laradock%E7%AE%80%E4%BB%8B">LaraDock简介</a>
+<ul>
+<li><a href="#%E6%94%AF%E6%8C%81%E7%9A%84%E8%BD%AF%E4%BB%B6">支持的软件</a></li>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AFdocker">什么是Docker</a></li>
+<li><a href="#docker-vs-vagrant">Docker vs Vagrant</a></li>
+<li><a href="#laradock-vs-homestead">LaraDock vs Homestead</a></li>
+</ul>
+</li>
+<li><a href="#%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA">环境搭建</a>
+<ul>
+<li><a href="#%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96">安装依赖</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85laradock">安装LaraDock</a></li>
+<li><a href="#%E5%90%AF%E5%8A%A8laradock">启动LaraDock</a>
+<ul>
+<li><a href="#web%E6%9C%8D%E5%8A%A1%E5%99%A8">web服务器</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E5%BA%94%E7%94%A8%E9%85%8D%E7%BD%AE">应用配置</a></li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </div>
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+  <!-- Background of PhotoSwipe. 
+        It's a separate element as animating opacity is faster than rgba(). -->
+  <div class="pswp__bg">
+  </div>
+  <!-- Slides wrapper with overflow:hidden. -->
+  <div class="pswp__scroll-wrap">
+    <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+    <div class="pswp__container">
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+    </div>
+    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+    <div class="pswp__ui pswp__ui--hidden">
+      <div class="pswp__top-bar">
+        <!--  Controls are self-explanatory. Order can be changed. -->
+        <div class="pswp__counter">
+        </div>
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+        <!-- element will get class pswp__preloader--active when preloader is running -->
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip">
+        </div>
+      </div>
+      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+      </button>
+      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+      </button>
+      <div class="pswp__caption">
+        <div class="pswp__caption__center">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cafe.summer.today/media/scripts/main.js"></script>
+  
+  <!-- Code Highlight -->
+  
+    <script src="https://cafe.summer.today/media/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+  <script>
+    //拿到预览框架，也就是上面的html代码
+    var pswpElement = document.querySelectorAll('.pswp')[0];
+    //定义图片数组变量
+    var imgitems;
+    /**
+    * 用于显示预览界面
+    * @param index 图片数组下标
+    */
+    function viewImg(index) {
+      //其它选项这里不做过多阐述，详情见官网
+      var pswpoptions = {
+        index: parseInt(index, 10), // 开始幻灯片索引。0是第一张幻灯片。必须是整数，而不是字符串。
+        bgOpacity: 0.7, // 背景透明度，0-1
+        maxSpreadZoom: 3, // 缩放级别，不要太大
+      };
+      //初始化并打开PhotoSwipe，pswpElement对应上面预览框架，PhotoSwipeUI_Default为皮肤，imgitems为图片数组，pswpoptions为选项
+      var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, imgitems, pswpoptions);
+      gallery.init()
+    }
+    /**
+    * 用于添加图片点击事件
+    * @param img 图片元素
+    * @param index 所属下标（在imgitems中的位置）
+    */
+    function addImgClick(img, index) {
+      img.onclick = function() {
+        viewImg(index)
+      }
+    }
+    /**
+    * 轮询所有图片，获取src、width、height等数据，加入imgitems，并给图片元素添加事件
+    * 最好在onload中执行该方法，本站因放在最底部，所以直接初始化
+    * 异步加载图片可在图片元素创建完成后调用此方法
+    */
+    function initImg() {
+      //重置图片数组
+      imgitems = [];
+      //查找class:markdown 下的所有img元素并遍历
+      var imgs = document.querySelectorAll('.markdown img');
+      for (var i = 0; i < imgs.length; i++) {
+        var img = imgs[i];
+        //本站相册初始为loading图片，真实图片放在data-src
+        var ds = img.getAttribute("data-src");
+        //创建image对象，用于获取图片宽高
+        var imgtemp = new Image();
+        //判断是否存在data-src
+        if (ds != null && ds.length > 0) {
+          imgtemp.src = ds
+        } else {
+          imgtemp.src = img.src
+        }
+        //判断是否存在缓存
+        if (imgtemp.complete) {
+          var imgobj = {
+            "src": imgtemp.src,
+            "w": imgtemp.width,
+            "h": imgtemp.height,
+          };
+          imgitems[i] = imgobj;
+          addImgClick(img, i);
+        } else {
+          imgtemp.index = i;
+          imgtemp.img = img;
+          imgtemp.onload = function() {
+            var imgobj = {
+              "src": this.src,
+              "w": this.width,
+              "h": this.height,
+            };
+            //不要使用push，因为onload前后顺序会不同
+            imgitems[this.index] = imgobj
+            //添加点击事件
+            addImgClick(this.img, this.index);
+          }
+        }
+      }
+    }
+    //初始化
+    initImg();
+  </script>
+  
+  
+    
+  
+</body>
+
+</html>

@@ -1,0 +1,394 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Github Fork Project - Summer Lee</title>
+<link rel="shortcut icon" href="https://cafe.summer.today/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://cafe.summer.today/media/css/tailwind.css">
+<link rel="stylesheet" href="https://cafe.summer.today/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Github Fork Project - Summer Lee - Atom Feed" href="https://cafe.summer.today/atom.xml">
+
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EX4CEGLQEE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-EX4CEGLQEE');
+  </script>
+    
+
+  <meta name="description" content="Fork
+
+打开一个他人的项目，点击 Fork，项目就会拷贝到你的账号下。
+克隆到本地：git clone &amp;lt;项目地址&amp;gt;
+
+注意，这里的项目地址要使用 SSH 而不是 HTTPS。否则后面 git push 的时候会报错提示账号..." />
+  <meta property="og:title" content="Github Fork Project - Summer Lee">
+  <meta property="og:description" content="Fork
+
+打开一个他人的项目，点击 Fork，项目就会拷贝到你的账号下。
+克隆到本地：git clone &amp;lt;项目地址&amp;gt;
+
+注意，这里的项目地址要使用 SSH 而不是 HTTPS。否则后面 git push 的时候会报错提示账号..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://cafe.summer.today/post/github-fork-project/" />
+  <meta property="og:image" content="https://cafe.summer.today/images/avatar.png">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="Github Fork Project - Summer Lee">
+  <meta name="twitter:description" content="Fork
+
+打开一个他人的项目，点击 Fork，项目就会拷贝到你的账号下。
+克隆到本地：git clone &amp;lt;项目地址&amp;gt;
+
+注意，这里的项目地址要使用 SSH 而不是 HTTPS。否则后面 git push 的时候会报错提示账号...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://cafe.summer.today/post/github-fork-project/">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+ 
+  
+    <link rel="stylesheet" href="https://cafe.summer.today/media/css/prism-atom-dark.css">
+  
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://cafe.summer.today" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      Summer Lee
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          Github Fork Project
+        </h1>
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4">2021-12-17 · 3 min read</div>
+          
+            <a href="https://cafe.summer.today/tag/J-JmjJzqz/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              SSH
+            </a>
+          
+            <a href="https://cafe.summer.today/tag/9TxxrttezR/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              Github
+            </a>
+          
+        </div>
+        <div class="markdown mb-8" v-pre>
+          <h3 id="fork">Fork</h3>
+<ul>
+<li>打开一个他人的项目，点击 Fork，项目就会拷贝到你的账号下。</li>
+<li>克隆到本地：<code>git clone &lt;项目地址&gt;</code>
+<blockquote>
+<p>注意，这里的<strong>项目地址</strong>要使用 <strong>SSH</strong> 而不是 <strong>HTTPS</strong>。否则后面 <code>git push</code> 的时候会报错提示账号密码提交已被废弃。</p>
+</blockquote>
+</li>
+<li>Fork 与 upstream 保持一致。虽然这不是必要的一步，但是如果你想参与更多而不是仅仅做一个 quick fix, 你需要保证你的代码与远程原始代码库 (the original “upstream” repo) 保持一致。做到这一步，你仅需要设置下 remote:<pre><code class="language-bash"># Add 'upstream' repo to list of remotes
+git remote add upstream https://github.com/UPSTREAM-USER/ORIGINAL-PROJECT.git
+
+# Verify the new remote named 'upstream'
+git remote -v
+</code></pre>
+</li>
+<li>创建并切换到新分支：<code>git checkout -b sl-patch</code></li>
+<li>修改项目，并提交：<pre><code class="language-bash">git add -A
+git commit -m &lt;修改说明&gt;
+</code></pre>
+</li>
+<li>推送<pre><code class="language-bash">git push origin sl-patch
+</code></pre>
+</li>
+<li>Pull Request<br>
+<img src="https://cafe.summer.today/post-images/1662659271120.png" alt="" loading="lazy"></li>
+<li>提交后等待作者合并，合并完成即可删除分支。</li>
+<li>下次有新的修改时，要先合并上游更新到本地：<pre><code class="language-bash">git pull --rebase upstream source
+</code></pre>
+</li>
+</ul>
+<hr>
+<h3 id="问题">问题</h3>
+<p>由于换了新电脑，git 需要重新配置，否则远程仓库无法识别 ssh 密钥。</p>
+<pre><code class="language-bash">git config --global user.name &quot;your_name&quot;
+git config --global user.email &quot;your_email&quot;
+
+// 创建密钥，使用 ed25519 加密
+ssh-keygen -t ed25519 -C &lt;your_email&gt;
+
+// ssh 默认验证列表中并没有 id_ed25519，只有 id_rsa，所以需要进行添加
+ssh -v git@github.com
+ssh-agent -s
+ssh-add ~/.ssh/id_ed25519
+// ssh-add 后可能会出现重启电脑后失效的问题，将其添加到 .zshrc 配置文件可解决。
+
+// 验证
+ssh -T git@github.com
+</code></pre>
+<p>最后在 Github 添加新的 SSH Key 即可。</p>
+<hr>
+<h3 id="参考">参考</h3>
+<p>[1]: <a href="https://aaronflower.github.io/essays/github-fork-pull-workflow.html">Github 标准 Fork &amp; Pull Request 流程</a><br>
+[2]: <a href="https://juejin.cn/post/6932300709987614728">github fork仓库发起Pull Request合入全流程</a><br>
+[3]: <a href="https://www.cxymm.net/article/u012435142/89491388">Github上Fork别人代码后，提交自己的修改</a><br>
+[4]: <a href="https://github.com/tcitds1/blog/issues/3">换电脑之后的git环境配置</a><br>
+[5]: <a href="https://wiki.archlinux.org/title/SSH_keys_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E9%80%89%E6%8B%A9%E8%AE%A4%E8%AF%81%E5%AF%86%E9%92%A5%E7%A7%8D%E7%B1%BB">SSH keys</a><br>
+[6]: <a href="https://cloud.tencent.com/developer/article/1493298">ssh key类型这么多，要如何选择呢？</a><br>
+[7]: <a href="https://blog.csdn.net/YanceChen2013/article/details/82218356">git 使用出现Permission denied (publickey). fatal: Could not read from remote repository.</a><br>
+[8]: <a href="https://zhuanlan.zhihu.com/p/51199833">GitHub Pull Request入门</a></p>
+
+        </div>
+        <!-- Share to Twitter, Weibo, Telegram -->
+        <div class="flex items-center">
+          <div class="mr-4 flex items-center">
+            <i class="ri-share-forward-line text-gray-500"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-blue-500 hover:bg-blue-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTwitter">
+            <i class="ri-twitter-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-red-500 hover:bg-red-100 dark:hover:bg-gray-600 inline-flex" @click="shareToWeibo">
+            <i class="ri-weibo-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-indigo-500 hover:bg-indigo-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTelegram">
+            <i class="ri-telegram-line"></i>
+          </div>
+        </div>
+      </div>
+
+      
+        
+
+        
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/disqusjs@1.3/dist/disqusjs.css">
+<script type="application/javascript" src="https://cdn.jsdelivr.net/npm/disqusjs@1.3/dist/disqus.js"></script>
+<script type="application/javascript" src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+<script type="application/javascript" src="https://cdn.jsdelivr.net/npm/whatwg-fetch@3.0.0/dist/fetch.umd.min.js"></script>
+
+<div id="disqus_thread"></div>
+
+<script type="application/javascript">
+
+var options = {
+  shortname: 'summer-lee',
+  apikey: 'slwZK7rHlYsCAVg9tavZ4TBOR8efGDfR1OjXfrUNwgRk7k9EpulkeMT5hyPd8god',
+}
+if ('https://disqus.lanruo942.workers.dev/api/') {
+  options.api = 'https://disqus.lanruo942.workers.dev/api/'
+}
+var dsqjs = new DisqusJS(options)
+
+</script>
+
+        
+      
+
+      
+
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+</footer>
+    </div>
+
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#fork">Fork</a></li>
+<li><a href="#%E9%97%AE%E9%A2%98">问题</a></li>
+<li><a href="#%E5%8F%82%E8%80%83">参考</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </div>
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+  <!-- Background of PhotoSwipe. 
+        It's a separate element as animating opacity is faster than rgba(). -->
+  <div class="pswp__bg">
+  </div>
+  <!-- Slides wrapper with overflow:hidden. -->
+  <div class="pswp__scroll-wrap">
+    <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+    <div class="pswp__container">
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+    </div>
+    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+    <div class="pswp__ui pswp__ui--hidden">
+      <div class="pswp__top-bar">
+        <!--  Controls are self-explanatory. Order can be changed. -->
+        <div class="pswp__counter">
+        </div>
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+        <!-- element will get class pswp__preloader--active when preloader is running -->
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip">
+        </div>
+      </div>
+      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+      </button>
+      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+      </button>
+      <div class="pswp__caption">
+        <div class="pswp__caption__center">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cafe.summer.today/media/scripts/main.js"></script>
+  
+  <!-- Code Highlight -->
+  
+    <script src="https://cafe.summer.today/media/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+  <script>
+    //拿到预览框架，也就是上面的html代码
+    var pswpElement = document.querySelectorAll('.pswp')[0];
+    //定义图片数组变量
+    var imgitems;
+    /**
+    * 用于显示预览界面
+    * @param index 图片数组下标
+    */
+    function viewImg(index) {
+      //其它选项这里不做过多阐述，详情见官网
+      var pswpoptions = {
+        index: parseInt(index, 10), // 开始幻灯片索引。0是第一张幻灯片。必须是整数，而不是字符串。
+        bgOpacity: 0.7, // 背景透明度，0-1
+        maxSpreadZoom: 3, // 缩放级别，不要太大
+      };
+      //初始化并打开PhotoSwipe，pswpElement对应上面预览框架，PhotoSwipeUI_Default为皮肤，imgitems为图片数组，pswpoptions为选项
+      var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, imgitems, pswpoptions);
+      gallery.init()
+    }
+    /**
+    * 用于添加图片点击事件
+    * @param img 图片元素
+    * @param index 所属下标（在imgitems中的位置）
+    */
+    function addImgClick(img, index) {
+      img.onclick = function() {
+        viewImg(index)
+      }
+    }
+    /**
+    * 轮询所有图片，获取src、width、height等数据，加入imgitems，并给图片元素添加事件
+    * 最好在onload中执行该方法，本站因放在最底部，所以直接初始化
+    * 异步加载图片可在图片元素创建完成后调用此方法
+    */
+    function initImg() {
+      //重置图片数组
+      imgitems = [];
+      //查找class:markdown 下的所有img元素并遍历
+      var imgs = document.querySelectorAll('.markdown img');
+      for (var i = 0; i < imgs.length; i++) {
+        var img = imgs[i];
+        //本站相册初始为loading图片，真实图片放在data-src
+        var ds = img.getAttribute("data-src");
+        //创建image对象，用于获取图片宽高
+        var imgtemp = new Image();
+        //判断是否存在data-src
+        if (ds != null && ds.length > 0) {
+          imgtemp.src = ds
+        } else {
+          imgtemp.src = img.src
+        }
+        //判断是否存在缓存
+        if (imgtemp.complete) {
+          var imgobj = {
+            "src": imgtemp.src,
+            "w": imgtemp.width,
+            "h": imgtemp.height,
+          };
+          imgitems[i] = imgobj;
+          addImgClick(img, i);
+        } else {
+          imgtemp.index = i;
+          imgtemp.img = img;
+          imgtemp.onload = function() {
+            var imgobj = {
+              "src": this.src,
+              "w": this.width,
+              "h": this.height,
+            };
+            //不要使用push，因为onload前后顺序会不同
+            imgitems[this.index] = imgobj
+            //添加点击事件
+            addImgClick(this.img, this.index);
+          }
+        }
+      }
+    }
+    //初始化
+    initImg();
+  </script>
+  
+  
+    
+  
+</body>
+
+</html>

@@ -1,0 +1,493 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>某项目 swf 转 html5 过程 - Summer Lee</title>
+<link rel="shortcut icon" href="https://cafe.summer.today/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://cafe.summer.today/media/css/tailwind.css">
+<link rel="stylesheet" href="https://cafe.summer.today/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="某项目 swf 转 html5 过程 - Summer Lee - Atom Feed" href="https://cafe.summer.today/atom.xml">
+
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EX4CEGLQEE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-EX4CEGLQEE');
+  </script>
+    
+
+  <meta name="description" content="swf反编译
+
+
+客户需求是将swf动画文件作修改，内容替换成中文。
+
+
+考虑到现代浏览器默认禁用flash插件，决定尝试转换成 html5。
+
+
+源 swf[1] 文件地址：HpfHydraulicPresses
+
+
+由于swf文件是导出..." />
+  <meta property="og:title" content="某项目 swf 转 html5 过程 - Summer Lee">
+  <meta property="og:description" content="swf反编译
+
+
+客户需求是将swf动画文件作修改，内容替换成中文。
+
+
+考虑到现代浏览器默认禁用flash插件，决定尝试转换成 html5。
+
+
+源 swf[1] 文件地址：HpfHydraulicPresses
+
+
+由于swf文件是导出..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://cafe.summer.today/post/mou-xiang-mu-swf-zhuan-html5-guo-cheng/" />
+  <meta property="og:image" content="https://cafe.summer.today/images/avatar.png">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="某项目 swf 转 html5 过程 - Summer Lee">
+  <meta name="twitter:description" content="swf反编译
+
+
+客户需求是将swf动画文件作修改，内容替换成中文。
+
+
+考虑到现代浏览器默认禁用flash插件，决定尝试转换成 html5。
+
+
+源 swf[1] 文件地址：HpfHydraulicPresses
+
+
+由于swf文件是导出...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://cafe.summer.today/post/mou-xiang-mu-swf-zhuan-html5-guo-cheng/">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+ 
+  
+    <link rel="stylesheet" href="https://cafe.summer.today/media/css/prism-atom-dark.css">
+  
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://cafe.summer.today" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      Summer Lee
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          某项目 swf 转 html5 过程
+        </h1>
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4">2020-03-21 · 9 min read</div>
+          
+            <a href="https://cafe.summer.today/tag/1IGZrkBMM/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              swf
+            </a>
+          
+            <a href="https://cafe.summer.today/tag/NH18DwkYh1/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              HTML
+            </a>
+          
+        </div>
+        <div class="markdown mb-8" v-pre>
+          <h3 id="swf反编译">swf反编译</h3>
+<ol>
+<li>
+<p>客户需求是将swf动画文件作修改，内容替换成中文。</p>
+</li>
+<li>
+<p>考虑到现代浏览器默认禁用flash插件，决定尝试转换成 html5。</p>
+</li>
+<li>
+<p>源 swf<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> 文件地址：<a href="http://interactive.sacmi.com/Laeis/Ceramics/HpfHydraulicPresses/zhCN/HpfHydraulicPresses.htm">HpfHydraulicPresses</a></p>
+</li>
+<li>
+<p>由于swf文件是导出后的播放格式，需要反编译为 fla<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup> 格式文件才能用动画编辑软件导出为html5。</p>
+<blockquote>
+<p>尝试使用Adobe Animate软件打开只能播放不能编辑。</p>
+</blockquote>
+</li>
+<li>
+<p>由于开始时不清楚此 swf 文件的 ActionScript<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup> 版本，所以使用 <a href="https://github.com/jindrapetrik/jpexs-decompiler">JPEXS Free Flash Decompiler</a> version 11.2.0 nightly 1722版本反编译出的fla文件并不正确，脚本、字体缺失。Adobe flash player<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup> 播放动画无限循环，不响应鼠标事件。❌</p>
+<blockquote>
+<p>后验证为ActionScript1.0版本。</p>
+<p>5 及之后的操作都是在 Windows 7 操作系统进行。</p>
+</blockquote>
+</li>
+<li>
+<p>尝试使用较早的 version 8.0.0 版本，导出的 fla 依然播放不正确。❌</p>
+<blockquote>
+<p>怀疑是 JPEXS 导出 fla 版本与 swf 文件的 ActionScript 版本不匹配造成，但 JPEXS 只能指定导出为 Flash CS6 和 Flash CS5。</p>
+</blockquote>
+</li>
+<li>
+<p>尝试使用其他反编译软件，Egret Technology（白鹭）公司的 <a href="https://www.egret.com/products/conversion">Egret Conversion</a>，打开软件上方菜单有「SWF转换」，点开拖入swf文件提示「请先选择一个转换项目」。❌</p>
+</li>
+<li>
+<p>尝试使用 <a href="http://www.flash-decompiler.com/">Flash Decompiler Trillix</a>, version 5.3, build 5.3.1400，导入 swf 文件后，点击顶部菜单「Convert」，在「Format」区域可以选择转换版本，然后点击「Convert」区域的「Convert current」即可。✅</p>
+<blockquote>
+<p>经过尝试后「Autodetect」转换的效果应该是最好的，动画、脚本、字体都全，导出后为ActionScript1.0 版本。但是会产生素材闪烁的问题，后面会解决。</p>
+</blockquote>
+</li>
+<li>
+<p>「Autodetect」转换的版本动画效果是最正确的，其他版本动画效果有问题，但是开始播放后不会出现机械素材底部闪烁的问题。尝试解决，这里使用 Adobe Flash Professional CS6 12.0.0.481 原版安装版，因为我没用过 Adobe Flash Professional 系列软件，所以就找找看是素材的问题还是图层的问题。</p>
+<ol>
+<li>找到有问题的素材并删除，素材没了闪烁也就不存在了，说明问题出在此素材相关的图层上。</li>
+<li>尝试找到相关图层并挨个删除，保存文件后点击菜单栏「调试」-&gt;「调试影片」-&gt;「在Flash Professional中」，<code>Alt + F5</code>播放。（这是个体力活，还是得学学怎么调试 flash 定位问题，不过推荐学习最新版的 Adoeb Animate。）</li>
+<li>最后发现可能是「遮罩」的问题，可能是最新的 Adobe Flash Player 不兼容 ActionScript1.0 的遮罩动画？但造成此问题的只有一个遮罩层，删除掉此遮罩层保存即解决问题。</li>
+</ol>
+<blockquote>
+<p>用 CS6 版本的原因是 CS6之后的 CC 版本不再支持 ActionScript2.0 和 1.0。</p>
+<p>用原版安装版的原因是绿色版不支持扩展管理器（可能是我下载源的问题，保险起见可以用原版），因为后面转 html5 需要用到扩展，这里需要安装对应版本的扩展管理器：<a href="https://www.adobe.com/exchange/em_download/em6_download.html">Adobe Extension Manager CS6</a>。⚠️其他版本的扩展管理器不能用于CS6系列。</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="fla-转-html5">fla 转 html5</h3>
+<p>能搜到的工具有以下几个：</p>
+<ol>
+<li>
+<p>Google 出的 swiffy 插件（安装到上面提到的扩展管理器），2016年已停止服务，所以即使下载了 swiffy 插件并安装上了也没有远程服务可用。❌</p>
+</li>
+<li>
+<p>Adobe 自家推出的 Toolkit-for-CreatJS 扩展（安装到上面提到的扩展管理器），先下载的 1.2.0 版本，但安装提示「扩展xxx不包含有效的签名。不会安装此扩展」。查找资料显示安装 1.2.0 版本需要 Adobe Flash Pro CS6 12.0.12 版本，没找到此版本的安装包或更新包。后下载了 0.3.20 版本，可安装，可使用，但效果极差，生成的 canvas 动画是循环播放的。❌</p>
+</li>
+<li>
+<p>开源项目 <a href="https://github.com/ienaga/swf2js">swf2js</a>，参考项目中的示例，组成代码，用示例的 swf 文件在服务器上测试成功。换用客户需要的 swf 文件，可能是动画过于复杂，下方代码执行了三次，第三次 AVM2 的值为 undefined，报错。❌</p>
+</li>
+</ol>
+<pre><code class="language-js">// local
+if (prop in AVM2) {
+	obj = AVM2;
+}
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://cafe.summer.today/post-images/1662663336519.png" alt="AVM2 is undefined" loading="lazy"></figure>
+<ol>
+<li>Mozilla出品的 <a href="https://mozilla.github.io/shumway/">Shumway</a> 渲染引擎，基于 JS，但项目 2016 年就停止维护了。在 Github 上下载源码后，由于缺少各种文件，demo.html 等页面都无法正常运行，于是根据有 demo 的 <a href="https://mozilla.github.io/shumway/">项目主页</a> 下载缺失的文件（项目主页对应源码中的 web 目录，所以需要补全 web 目录下缺失的部分。另外在 index.html 中资源调用未声明 https，在本地运行需要手动添加）：</li>
+</ol>
+<pre><code class="language-zsh">build/bundles/shumway.gfx.js
+build/bundles/shumway.player.js
+src/compatibility.js
+src/tabzilla-min.css
+</code></pre>
+<p>完成后浏览器调试页面不再报文件缺失错误，但还会报跨域错误（由于浏览器安全策略，访问本地文件会被判定跨域）：</p>
+<figure data-type="image" tabindex="2"><img src="https://cafe.summer.today/post-images/1662663486859.png" alt="跨域错误" loading="lazy"></figure>
+<p>解决方案1：关闭 chrome 浏览器的安全策略，参照 <a href="https://blog.csdn.net/xiaobo0134/article/details/93751433">mac上设置新版chrome浏览器跨域</a>。iTerm下执行命令 <code>open -n /Applications/Google\ Chrome.app/ --args --disable-web-security  --user-data-dir=/Users/yourname/MyChromeDevUserData/</code>，chrome 浏览器提示「您使用的是不受支持的命令行标记：--disable-web-security。稳定性和安全性会有所下降」，说明此命令已经不适用于现在的 chrome 了（后面发现无效不是因为命令无效，而是仍然缺少文件，此处命令有效）。❌</p>
+<p>解决方案2：上传到服务器，用域名访问。上传后Edge浏览器访问报错：</p>
+<figure data-type="image" tabindex="3"><img src="https://cafe.summer.today/post-images/1662663532366.png" alt="instanceInfo 为 null" loading="lazy"></figure>
+<p>到这里其实就卡住了，以为错误原因是无法加载 source map 造成的，结果项目主页也是无法加载 source map。（这里如果看一下 Firefox 浏览器报错会更快发现问题，此时 Firefox 报错信息为 <code>uncaught exception: Unable to load ../build/playerglobal/playerglobal.json: Not Found</code>，说明还是缺少文件。）❌</p>
+<p>解决方案3：用另一个示例项目做参考重新尝试，<a href="https://mozilla.github.io/shumway/examples/racing/">racing小游戏</a>，对应源码中 <code>examples/racing</code> 文件夹，由于目录不对无法调用<code>viewer.html</code>，所以拷贝 <code>racing</code> 文件夹到 <code>web</code> 目录下，修改路径。上传到服务器用域名访问Firefox报错 <code>TypeError: objectCI is null</code>，Edge 中跟上方截图报错相同。无意中发现 Edge 报错中有个文件缺失的错误，打开此链接然后替换成 racing 示例项目的网址顺利下载到此文件：</p>
+<figure data-type="image" tabindex="4"><img src="https://cafe.summer.today/post-images/1662663595451.png" alt="文件缺失" loading="lazy"></figure>
+<p>放入对应目录后刷新页面报错，继续用同样方法拿到两个新文件：</p>
+<figure data-type="image" tabindex="5"><img src="https://cafe.summer.today/post-images/1662663611514.png" alt="文件缺失" loading="lazy"></figure>
+<p>放入对应目录后刷新，成功正确显示动画，至此基本组件齐全，无需 flash 插件即可播放 swf 动画。（此时方案 2 的 <code>web/index.html</code> 刷新后也能正确显示了）✅</p>
+<p>新添加的文件：</p>
+<pre><code class="language-zsh">libs/builtin.abc
+playerglobal/playerglobal.abcs
+playerglobal/playerglobal.json
+</code></pre>
+<h3 id="判断客户端浏览器是否默认开启flash插件">判断客户端浏览器是否默认开启Flash插件</h3>
+<p>方法封装：</p>
+<pre><code class="language-js">function hasUsableFlash(){
+	var flashObj;
+	if(typeof window.ActiveXObject != &quot;undefined&quot;){
+        flashObj= new  ActiveXObject(&quot;ShockwaveFlash.ShockwaveFlash&quot;);
+    } else {
+        // 谷歌、火狐、微软Edge、Safari等现代浏览器不支持ActiveXObject
+        flashObj= navigator.plugins['Shockwave Flash'];
+    }
+    return flashObj? true : false;
+}
+
+var result= hasUsableFlash();
+if (!result) {
+	alert(&quot;您未安装flash插件，或您浏览未启用flash插件！&quot;);
+} else {
+    alert(&quot;rignt!&quot;);
+}
+</code></pre>
+<h3 id="总结">总结</h3>
+<p>最后的方案就是：</p>
+<ol>
+<li>通过 <a href="http://www.flash-decompiler.com/">Flash Decompiler Trillix</a> 将 swf 反编译成 flash 文件，这样就可以用相应 ActionScript 版本的 Adobe Flash Pro 版本进行编辑修改。</li>
+<li>通过 <a href="https://mozilla.github.io/shumway/">Shumway</a> 提供swf文件的 js 渲染引擎，就不需要调用 Adobe Flash Player 插件。</li>
+<li>可以用 js 判断，只在客户端浏览器禁用 Adobe Flash Player 插件时使用 Shumway，客户端浏览器默认开启插件时调用插件。</li>
+<li>相关代码放在 website/yuanhe/shumway 里面。</li>
+</ol>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>swf(shock wave flash)是Macromedia（现已被ADOBE公司收购）公司的动画设计软件Flash的专用格式，被广泛应用于网页设计、动画制作等领域，swf文件通常也被称为Flash文件。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>fla是一种包含原始素材的Flash动画格式。fla文件可以在Flash认证的软件中进行编辑并且编译生成swf文件。我们所有的原始素材都保存在fla文件中，由于它包含所需要的全部原始信息，所以体积较大，fla文件是千万不能丢失的，否则一切都要重新来做。 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn3" class="footnote-item"><p>ActionScript是Macromedia（现已被Adobe收购）为其Flash产品开发的，最初是一种简单的脚本语言，目前已经是一种完全的面向对象的编程语言，功能强大，类库丰富，语法类似JavaScript，多用于Flash互动性、娱乐性、实用性开发，网页制作和RIA应用程序开发。 <a href="#fnref3" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn4" class="footnote-item"><p>Adobe Flash Player是曾获广泛使用、专有的多媒体程序播放器。其最初由Macromedia出品，在Macromedia被Adobe收购后由Adobe继续开发。 Flash Player使用的SWF文件，可由Adobe Animate、Adobe Flex或者其他软件或第三方工具创建。 <a href="#fnref4" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+        </div>
+        <!-- Share to Twitter, Weibo, Telegram -->
+        <div class="flex items-center">
+          <div class="mr-4 flex items-center">
+            <i class="ri-share-forward-line text-gray-500"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-blue-500 hover:bg-blue-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTwitter">
+            <i class="ri-twitter-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-red-500 hover:bg-red-100 dark:hover:bg-gray-600 inline-flex" @click="shareToWeibo">
+            <i class="ri-weibo-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-indigo-500 hover:bg-indigo-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTelegram">
+            <i class="ri-telegram-line"></i>
+          </div>
+        </div>
+      </div>
+
+      
+        
+
+        
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/disqusjs@1.3/dist/disqusjs.css">
+<script type="application/javascript" src="https://cdn.jsdelivr.net/npm/disqusjs@1.3/dist/disqus.js"></script>
+<script type="application/javascript" src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+<script type="application/javascript" src="https://cdn.jsdelivr.net/npm/whatwg-fetch@3.0.0/dist/fetch.umd.min.js"></script>
+
+<div id="disqus_thread"></div>
+
+<script type="application/javascript">
+
+var options = {
+  shortname: 'summer-lee',
+  apikey: 'slwZK7rHlYsCAVg9tavZ4TBOR8efGDfR1OjXfrUNwgRk7k9EpulkeMT5hyPd8god',
+}
+if ('https://disqus.lanruo942.workers.dev/api/') {
+  options.api = 'https://disqus.lanruo942.workers.dev/api/'
+}
+var dsqjs = new DisqusJS(options)
+
+</script>
+
+        
+      
+
+      
+
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+</footer>
+    </div>
+
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#swf%E5%8F%8D%E7%BC%96%E8%AF%91">swf反编译</a></li>
+<li><a href="#fla-%E8%BD%AC-html5">fla 转 html5</a></li>
+<li><a href="#%E5%88%A4%E6%96%AD%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E6%98%AF%E5%90%A6%E9%BB%98%E8%AE%A4%E5%BC%80%E5%90%AFflash%E6%8F%92%E4%BB%B6">判断客户端浏览器是否默认开启Flash插件</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </div>
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+  <!-- Background of PhotoSwipe. 
+        It's a separate element as animating opacity is faster than rgba(). -->
+  <div class="pswp__bg">
+  </div>
+  <!-- Slides wrapper with overflow:hidden. -->
+  <div class="pswp__scroll-wrap">
+    <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+    <div class="pswp__container">
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+    </div>
+    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+    <div class="pswp__ui pswp__ui--hidden">
+      <div class="pswp__top-bar">
+        <!--  Controls are self-explanatory. Order can be changed. -->
+        <div class="pswp__counter">
+        </div>
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+        <!-- element will get class pswp__preloader--active when preloader is running -->
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip">
+        </div>
+      </div>
+      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+      </button>
+      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+      </button>
+      <div class="pswp__caption">
+        <div class="pswp__caption__center">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cafe.summer.today/media/scripts/main.js"></script>
+  
+  <!-- Code Highlight -->
+  
+    <script src="https://cafe.summer.today/media/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+  <script>
+    //拿到预览框架，也就是上面的html代码
+    var pswpElement = document.querySelectorAll('.pswp')[0];
+    //定义图片数组变量
+    var imgitems;
+    /**
+    * 用于显示预览界面
+    * @param index 图片数组下标
+    */
+    function viewImg(index) {
+      //其它选项这里不做过多阐述，详情见官网
+      var pswpoptions = {
+        index: parseInt(index, 10), // 开始幻灯片索引。0是第一张幻灯片。必须是整数，而不是字符串。
+        bgOpacity: 0.7, // 背景透明度，0-1
+        maxSpreadZoom: 3, // 缩放级别，不要太大
+      };
+      //初始化并打开PhotoSwipe，pswpElement对应上面预览框架，PhotoSwipeUI_Default为皮肤，imgitems为图片数组，pswpoptions为选项
+      var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, imgitems, pswpoptions);
+      gallery.init()
+    }
+    /**
+    * 用于添加图片点击事件
+    * @param img 图片元素
+    * @param index 所属下标（在imgitems中的位置）
+    */
+    function addImgClick(img, index) {
+      img.onclick = function() {
+        viewImg(index)
+      }
+    }
+    /**
+    * 轮询所有图片，获取src、width、height等数据，加入imgitems，并给图片元素添加事件
+    * 最好在onload中执行该方法，本站因放在最底部，所以直接初始化
+    * 异步加载图片可在图片元素创建完成后调用此方法
+    */
+    function initImg() {
+      //重置图片数组
+      imgitems = [];
+      //查找class:markdown 下的所有img元素并遍历
+      var imgs = document.querySelectorAll('.markdown img');
+      for (var i = 0; i < imgs.length; i++) {
+        var img = imgs[i];
+        //本站相册初始为loading图片，真实图片放在data-src
+        var ds = img.getAttribute("data-src");
+        //创建image对象，用于获取图片宽高
+        var imgtemp = new Image();
+        //判断是否存在data-src
+        if (ds != null && ds.length > 0) {
+          imgtemp.src = ds
+        } else {
+          imgtemp.src = img.src
+        }
+        //判断是否存在缓存
+        if (imgtemp.complete) {
+          var imgobj = {
+            "src": imgtemp.src,
+            "w": imgtemp.width,
+            "h": imgtemp.height,
+          };
+          imgitems[i] = imgobj;
+          addImgClick(img, i);
+        } else {
+          imgtemp.index = i;
+          imgtemp.img = img;
+          imgtemp.onload = function() {
+            var imgobj = {
+              "src": this.src,
+              "w": this.width,
+              "h": this.height,
+            };
+            //不要使用push，因为onload前后顺序会不同
+            imgitems[this.index] = imgobj
+            //添加点击事件
+            addImgClick(this.img, this.index);
+          }
+        }
+      }
+    }
+    //初始化
+    initImg();
+  </script>
+  
+  
+    
+  
+</body>
+
+</html>

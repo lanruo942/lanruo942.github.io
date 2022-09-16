@@ -1,0 +1,689 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Verdaccio 搭建私有 npm 仓库 - Summer Lee</title>
+<link rel="shortcut icon" href="https://cafe.summer.today/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://cafe.summer.today/media/css/tailwind.css">
+<link rel="stylesheet" href="https://cafe.summer.today/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Verdaccio 搭建私有 npm 仓库 - Summer Lee - Atom Feed" href="https://cafe.summer.today/atom.xml">
+
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EX4CEGLQEE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-EX4CEGLQEE');
+  </script>
+    
+
+  <meta name="description" content="服务端配置
+
+环境：
+
+Ubuntu 20.04.4 LTS
+Node 16.14.2
+Npm 8.5.5
+Verdaccio v5.8.0
+
+
+Ubuntu 使用 NodeSource 安装指定 Node 版本，选择 16.x
+
+# Us..." />
+  <meta property="og:title" content="Verdaccio 搭建私有 npm 仓库 - Summer Lee">
+  <meta property="og:description" content="服务端配置
+
+环境：
+
+Ubuntu 20.04.4 LTS
+Node 16.14.2
+Npm 8.5.5
+Verdaccio v5.8.0
+
+
+Ubuntu 使用 NodeSource 安装指定 Node 版本，选择 16.x
+
+# Us..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://cafe.summer.today/post/verdaccio-da-jian-si-you-npm-cang-ku/" />
+  <meta property="og:image" content="https://cafe.summer.today/images/avatar.png">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="Verdaccio 搭建私有 npm 仓库 - Summer Lee">
+  <meta name="twitter:description" content="服务端配置
+
+环境：
+
+Ubuntu 20.04.4 LTS
+Node 16.14.2
+Npm 8.5.5
+Verdaccio v5.8.0
+
+
+Ubuntu 使用 NodeSource 安装指定 Node 版本，选择 16.x
+
+# Us...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://cafe.summer.today/post/verdaccio-da-jian-si-you-npm-cang-ku/">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+ 
+  
+    <link rel="stylesheet" href="https://cafe.summer.today/media/css/prism-atom-dark.css">
+  
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://cafe.summer.today" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      Summer Lee
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          Verdaccio 搭建私有 npm 仓库
+        </h1>
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4">2022-03-28 · 9 min read</div>
+          
+            <a href="https://cafe.summer.today/tag/HiU77LHXS/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              Verdaccio
+            </a>
+          
+            <a href="https://cafe.summer.today/tag/cQClY84Yr/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              npm
+            </a>
+          
+        </div>
+        <div class="markdown mb-8" v-pre>
+          <h2 id="服务端配置">服务端配置</h2>
+<ul>
+<li>环境：
+<ul>
+<li>Ubuntu 20.04.4 LTS</li>
+<li>Node 16.14.2</li>
+<li>Npm 8.5.5</li>
+<li>Verdaccio v5.8.0</li>
+</ul>
+</li>
+<li>Ubuntu 使用 <a href="https://github.com/nodesource/distributions/blob/master/README.md">NodeSource</a> 安装指定 Node 版本，选择 16.x</li>
+</ul>
+<pre><code class="language-bash"># Using Ubuntu
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt-get install -y nodejs
+</code></pre>
+<ul>
+<li>安装 Verdaccio</li>
+</ul>
+<pre><code class="language-bash">npm install -g verdaccio
+// 此时可能会报权限错误，使用 sudo 进行安装
+</code></pre>
+<ul>
+<li>启动 Verdaccio</li>
+</ul>
+<pre><code class="language-bash">$&gt; verdaccio
+warn --- config file  - /home/ubuntu/verdaccio/config.yaml
+warn --- http address - http://localhost:4873/ - verdaccio/3.0.0
+</code></pre>
+<ul>
+<li>启动时会自动在当前用户根目录下创建 <code>/verdaccio/config.yaml</code> 配置文件。</li>
+<li>使用 Systemd 启动</li>
+</ul>
+<pre><code class="language-bash">// 创建单独运行用户
+$ sudo adduser --system --gecos 'Verdaccio NPM mirror' --group --home /var/lib/verdaccio verdaccio
+// Or, in case you do not have adduser:
+$ sudo useradd --system --comment 'Verdaccio NPM mirror' --create-home --home-dir /var/lib/verdaccio --shell /sbin/nologin verdaccio
+
+// Using Systemd
+$ sudo cp /usr/lib/node_modules/verdaccio/systemd/verdaccio.service /lib/systemd/system/ &amp;&amp; sudo systemctl daemon-reload
+
+// 开机自启
+$ sudo systemctl enable verdaccio
+</code></pre>
+<ul>
+<li>默认的 <code>verdaccio.service</code> 文件中配置文件的位置是 <code>/etc/verdaccio/config.yaml</code> （权限 root） ，存储数据的位置是 <code>/var/lib/verdaccio</code>（权限 verdaccio） ，所以需要移动相关文件到这些位置，或者修改 unit</li>
+</ul>
+<pre><code class="language-bash"># cd /etc/
+# mkdir verdaccio
+# cp /home/ubuntu/verdaccio/config.yaml /etc/verdaccio
+</code></pre>
+<ul>
+<li>默认 config.yaml 文件中的数据是存储在 <code>./</code> 当前目录下，全部修改为 <code>/var/lib/verdaccio</code>，此目录中的相关文件会在使用到的时候自动创建，无需手动创建。</li>
+<li>重启服务</li>
+</ul>
+<pre><code class="language-bash">$ sudo systemctl restart verdaccio
+</code></pre>
+<ul>
+<li>配置 nginx 反向代理</li>
+</ul>
+<pre><code class="language-bash">file name: &lt;your_domain&gt;
+content:
+upstream &lt;your_domain&gt; {
+    server localhost:4873;
+    keepalive 64;
+}
+
+
+server {
+    listen 80;
+    server_name &lt;your_domain&gt;;
+    return 302 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name &lt;your_domain&gt;;
+
+    ssl_certificate     /etc/verdaccio/your_cert.pem;
+    ssl_certificate_key /etc/verdaccio/your_key.pem;
+
+    ssl_session_cache  builtin:1000  shared:SSL:10m;
+    ssl_protocols  TLSv1 TLSv1.1 TLSv1.2;
+    ssl_ciphers HIGH:!aNULL:!eNULL:!EXPORT:!CAMELLIA:!DES:!MD5:!PSK:!RC4;
+    ssl_prefer_server_ciphers on;
+
+    # upload file size
+    client_max_body_size     50m;
+    client_header_timeout    1m;
+    client_body_timeout      1m;
+    proxy_connect_timeout     60s;
+    proxy_read_timeout      1m;
+    proxy_send_timeout      1m;
+
+	// 暂时只使用这一项配置
+    location / {
+        proxy_set_header    Host $host;
+        proxy_set_header    X-Real-IP $remote_addr;
+        proxy_set_header    X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header    X-Forwarded-Proto $scheme;
+        proxy_pass          http://localhost:4873;
+        proxy_read_timeout  600;
+        proxy_redirect off;
+    }
+
+	// 共用域名使用此配置
+    location ~ ^/verdaccio/(.*)$ {
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Host $host;
+        proxy_set_header X-NginX-Proxy true;
+        proxy_pass http://localhost:4873/$1;
+        proxy_redirect off;
+    }
+
+	// 下面两个不确定是否有必要
+    location ~ ^/npm/(.*)$ {
+        proxy_pass http://localhost:4873/$1;
+        # proxy_set_header Host          $host:$server_port;
+        proxy_set_header Host            $host;
+        proxy_set_header X-Forwarded-For $remote_addr;
+        # proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Forwarded-Proto https;
+    }
+
+    location ~ ^/-/(.*)$ {
+        proxy_pass http://localhost:4873/-/$1;
+        proxy_set_header Host            $host;
+        proxy_set_header X-Forwarded-For $remote_addr;
+        proxy_set_header X-Forwarded-Proto https;
+    }
+}
+</code></pre>
+<ul>
+<li>配置好后重启 nginx 服务，打开浏览器访问 https://&lt;your_domain&gt;<br>
+<img src="https://cafe.summer.today/post-images/1662664600305.png" alt="" loading="lazy"></li>
+<li>按提示在服务器输入 <code>npm adduser --registry https://&lt;your_domain&gt;/</code>。（按上述操作，文件权限没有问题，所以不会报错）</li>
+</ul>
+<pre><code class="language-bash">ubuntu:/var/lib/verdaccio$ npm adduser --registry https://&lt;your_domain&gt;/
+npm notice Log in on https://&lt;your_domain&gt;/
+Username: ubuntu
+Password: 
+Email: (this IS public) &lt;your_email&gt;
+Logged in as ubuntu on https://&lt;your_domain&gt;/.
+
+// 创建的用户信息会保存在 /var/lib/verdaccio/htpasswd 中
+</code></pre>
+<ul>
+<li>报错，此报错是因为我将 store data 配置在了 <code>/etc/verdaccio</code> 目录下（root 权限），导致 verdaccio 用户没有权限访问此目录</li>
+</ul>
+<pre><code class="language-bash">ubuntu:~/.npm/_logs$ sudo npm adduser --registry https://&lt;your_domain&gt;/
+npm notice Log in on https://&lt;your_domain&gt;/
+Username: ubuntu
+Password: 
+Email: (this IS public) &lt;your_email&gt;
+
+npm ERR! code E500
+npm ERR! 500 Internal Server Error - PUT https://&lt;your_domain&gt;/-/user/org.couchdb.user:ubuntu - internal server error
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /root/.npm/_logs/2022-03-27T21_03_27_338Z-debug-0.log
+</code></pre>
+<ul>
+<li>创建一个测试 npm 仓库并发布</li>
+</ul>
+<pre><code class="language-bash">$ mkdir first-package
+$ touch first-package/index.js
+$ vim index.js    // console.log('Hello world!')
+$ npm init
+ubuntu:~/first-package$ npm publish --registry https://&lt;your_domain&gt;/
+npm notice 
+npm notice 📦  first-package@0.0.1
+npm notice === Tarball Contents === 
+npm notice 29B  index.js    
+npm notice 219B package.json
+npm notice === Tarball Details === 
+npm notice name:          first-package                           
+npm notice version:       0.0.1                                   
+npm notice filename:      first-package-0.0.1.tgz                 
+npm notice package size:  297 B                                   
+npm notice unpacked size: 248 B                                   
+npm notice shasum:        3e28baca317ebda24b8703c845f6e9067e1fd218
+npm notice integrity:     sha512-8DxJrTN0TwAsN[...]+jBQ0aNxJSLeQ==
+npm notice total files:   2                                       
+npm notice 
+npm notice Publishing to https://&lt;your_domain&gt;/
++ first-package@0.0.1
+</code></pre>
+<ul>
+<li>刷新浏览器页面<br>
+<img src="https://cafe.summer.today/post-images/1662664770646.png" alt="" loading="lazy"></li>
+<li>为 verdaccio 配置 ssl 证书（废弃）</li>
+</ul>
+<pre><code class="language-bash">ubuntu:/etc/verdaccio$ sudo openssl genrsa -out /etc/verdaccio/verdaccio-key.pem 2048
+
+ubuntu:/etc/verdaccio$ sudo openssl req -new -sha256 -key /etc/verdaccio/verdaccio-key.pem -out /etc/verdaccio/verdaccio-csr.pem
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:US
+State or Province Name (full name) [Some-State]:Alaska
+Locality Name (eg, city) []:Fairbanks
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:.
+Organizational Unit Name (eg, section) []:.
+Common Name (e.g. server FQDN or YOUR name) []:&lt;your_CN&gt;
+Email Address []:&lt;your_email&gt;
+
+Please enter the following 'extra' attributes
+to be sent with your certificate request
+A challenge password []:
+An optional company name []:
+
+ubuntu:/etc/verdaccio$ sudo openssl x509 -req -in /etc/verdaccio/verdaccio-csr.pem -signkey /etc/verdaccio/verdaccio-key.pem -out /etc/verdaccio/verdaccio-cert.pem
+Signature ok
+subject=C = US, ST = Alaska, L = Fairbanks, CN = &lt;your_CN&gt;, emailAddress = &lt;your_email&gt;
+Getting Private key
+</code></pre>
+<ul>
+<li>写入配置文件 <code>/etc/verdaccio/config.yaml</code> （废弃）</li>
+</ul>
+<pre><code class="language-yaml"># listen
+listen: localhost:4873
+
+https:
+  key: /etc/verdaccio/verdaccio-key.pem
+  cert: /etc/verdaccio/verdaccio-cert.pem
+  ca: /etc/verdaccio/verdaccio-csr.pem
+</code></pre>
+<ul>
+<li>客户端 npm install 一直报错</li>
+</ul>
+<pre><code class="language-bash">(node:25338) [DEP0123] DeprecationWarning: Setting the TLS ServerName to an IP address is not permitted by RFC 6066. This will be ignored in a future version.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+</code></pre>
+<ul>
+<li>怀疑是上面配置的 ssl 证书有问题，更改为下面的配置。</li>
+<li>用 acme.sh 创建证书，导出 cert 和 key。</li>
+<li>nginx &lt;your_domain&gt; 改为</li>
+</ul>
+<pre><code class="language-bash">// ...
+
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name &lt;your_domain&gt;;
+
+    ssl_certificate     /etc/verdaccio/your_cert.pem;
+    ssl_certificate_key /etc/verdaccio/your_key.pem;
+
+	// ...
+}
+</code></pre>
+<ul>
+<li>/etc/verdaccio/config.yaml 注释掉 https 配置（listen 官方文档说可以配置为 https，但是配置后一直启动失败，不注释 https 的话，客户端就会报上面的错误）（20220813 报上述客户端错误。更新 v5.14.0，配置 https 后启动成功，错误消失。）</li>
+</ul>
+<pre><code class="language-yaml">#
+# This is the default config file. It allows all users to do anything,
+# so don't use it on production systems.
+#
+# Look here for more config file examples:
+# https://github.com/verdaccio/verdaccio/tree/master/conf
+#
+
+# listen
+listen: localhost:4873
+
+# https:
+#   key: /etc/verdaccio/your_key.pem
+#   cert: /etc/verdaccio/your_cert.pem
+
+# ...
+</code></pre>
+<ul>
+<li>重启服务。</li>
+</ul>
+<h2 id="客户端配置">客户端配置</h2>
+<ul>
+<li>nrm 添加新的源</li>
+</ul>
+<pre><code class="language-bash">➜  ~ nrm add lily https://&lt;your_domain&gt;
+
+    add registry lily success
+
+➜  ~ nrm test                          
+
+* npm ------ 1738ms
+  yarn ----- 1353ms
+  tencent -- 185ms
+  cnpm ----- 1384ms
+  taobao --- 137ms
+  npmMirror - 1815ms
+  lily ----- 2011ms
+
+➜  ~ nrm use lily
+                        
+
+   Registry has been set to: https://&lt;your_domain&gt;/
+
+➜  ~ npm config get registry                          
+https://&lt;your_domain&gt;/
+</code></pre>
+<ul>
+<li>测试安装包</li>
+</ul>
+<pre><code class="language-bash">➜  tests npm install first-package
+
+added 1 package in 6s
+➜  tests ls
+node_modules      package-lock.json package.json
+➜  tests cd node_modules     
+➜  node_modules ls
+first-package
+</code></pre>
+<h2 id="其他">其他</h2>
+<ul>
+<li>遇事不决</li>
+</ul>
+<pre><code class="language-bash">// 服务端客户端都可以执行
+$ npm cache clean --force
+
+$ npx clear-npx-cache
+$ npm i -g npm
+</code></pre>
+<ul>
+<li>更新</li>
+</ul>
+<pre><code class="language-bash">// npm update
+$ npm i npm -g
+
+// verdaccio update
+$ npm i verdaccio -g
+</code></pre>
+
+        </div>
+        <!-- Share to Twitter, Weibo, Telegram -->
+        <div class="flex items-center">
+          <div class="mr-4 flex items-center">
+            <i class="ri-share-forward-line text-gray-500"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-blue-500 hover:bg-blue-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTwitter">
+            <i class="ri-twitter-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-red-500 hover:bg-red-100 dark:hover:bg-gray-600 inline-flex" @click="shareToWeibo">
+            <i class="ri-weibo-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-indigo-500 hover:bg-indigo-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTelegram">
+            <i class="ri-telegram-line"></i>
+          </div>
+        </div>
+      </div>
+
+      
+        
+
+        
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/disqusjs@1.3/dist/disqusjs.css">
+<script type="application/javascript" src="https://cdn.jsdelivr.net/npm/disqusjs@1.3/dist/disqus.js"></script>
+<script type="application/javascript" src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+<script type="application/javascript" src="https://cdn.jsdelivr.net/npm/whatwg-fetch@3.0.0/dist/fetch.umd.min.js"></script>
+
+<div id="disqus_thread"></div>
+
+<script type="application/javascript">
+
+var options = {
+  shortname: 'summer-lee',
+  apikey: 'slwZK7rHlYsCAVg9tavZ4TBOR8efGDfR1OjXfrUNwgRk7k9EpulkeMT5hyPd8god',
+}
+if ('https://disqus.lanruo942.workers.dev/api/') {
+  options.api = 'https://disqus.lanruo942.workers.dev/api/'
+}
+var dsqjs = new DisqusJS(options)
+
+</script>
+
+        
+      
+
+      
+
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+</footer>
+    </div>
+
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%85%8D%E7%BD%AE">服务端配置</a></li>
+<li><a href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE">客户端配置</a></li>
+<li><a href="#%E5%85%B6%E4%BB%96">其他</a></li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </div>
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+  <!-- Background of PhotoSwipe. 
+        It's a separate element as animating opacity is faster than rgba(). -->
+  <div class="pswp__bg">
+  </div>
+  <!-- Slides wrapper with overflow:hidden. -->
+  <div class="pswp__scroll-wrap">
+    <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+    <div class="pswp__container">
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+    </div>
+    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+    <div class="pswp__ui pswp__ui--hidden">
+      <div class="pswp__top-bar">
+        <!--  Controls are self-explanatory. Order can be changed. -->
+        <div class="pswp__counter">
+        </div>
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+        <!-- element will get class pswp__preloader--active when preloader is running -->
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip">
+        </div>
+      </div>
+      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+      </button>
+      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+      </button>
+      <div class="pswp__caption">
+        <div class="pswp__caption__center">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cafe.summer.today/media/scripts/main.js"></script>
+  
+  <!-- Code Highlight -->
+  
+    <script src="https://cafe.summer.today/media/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+  <script>
+    //拿到预览框架，也就是上面的html代码
+    var pswpElement = document.querySelectorAll('.pswp')[0];
+    //定义图片数组变量
+    var imgitems;
+    /**
+    * 用于显示预览界面
+    * @param index 图片数组下标
+    */
+    function viewImg(index) {
+      //其它选项这里不做过多阐述，详情见官网
+      var pswpoptions = {
+        index: parseInt(index, 10), // 开始幻灯片索引。0是第一张幻灯片。必须是整数，而不是字符串。
+        bgOpacity: 0.7, // 背景透明度，0-1
+        maxSpreadZoom: 3, // 缩放级别，不要太大
+      };
+      //初始化并打开PhotoSwipe，pswpElement对应上面预览框架，PhotoSwipeUI_Default为皮肤，imgitems为图片数组，pswpoptions为选项
+      var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, imgitems, pswpoptions);
+      gallery.init()
+    }
+    /**
+    * 用于添加图片点击事件
+    * @param img 图片元素
+    * @param index 所属下标（在imgitems中的位置）
+    */
+    function addImgClick(img, index) {
+      img.onclick = function() {
+        viewImg(index)
+      }
+    }
+    /**
+    * 轮询所有图片，获取src、width、height等数据，加入imgitems，并给图片元素添加事件
+    * 最好在onload中执行该方法，本站因放在最底部，所以直接初始化
+    * 异步加载图片可在图片元素创建完成后调用此方法
+    */
+    function initImg() {
+      //重置图片数组
+      imgitems = [];
+      //查找class:markdown 下的所有img元素并遍历
+      var imgs = document.querySelectorAll('.markdown img');
+      for (var i = 0; i < imgs.length; i++) {
+        var img = imgs[i];
+        //本站相册初始为loading图片，真实图片放在data-src
+        var ds = img.getAttribute("data-src");
+        //创建image对象，用于获取图片宽高
+        var imgtemp = new Image();
+        //判断是否存在data-src
+        if (ds != null && ds.length > 0) {
+          imgtemp.src = ds
+        } else {
+          imgtemp.src = img.src
+        }
+        //判断是否存在缓存
+        if (imgtemp.complete) {
+          var imgobj = {
+            "src": imgtemp.src,
+            "w": imgtemp.width,
+            "h": imgtemp.height,
+          };
+          imgitems[i] = imgobj;
+          addImgClick(img, i);
+        } else {
+          imgtemp.index = i;
+          imgtemp.img = img;
+          imgtemp.onload = function() {
+            var imgobj = {
+              "src": this.src,
+              "w": this.width,
+              "h": this.height,
+            };
+            //不要使用push，因为onload前后顺序会不同
+            imgitems[this.index] = imgobj
+            //添加点击事件
+            addImgClick(this.img, this.index);
+          }
+        }
+      }
+    }
+    //初始化
+    initImg();
+  </script>
+  
+  
+    
+  
+</body>
+
+</html>

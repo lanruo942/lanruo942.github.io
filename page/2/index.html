@@ -1,0 +1,346 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Summer Lee</title>
+<link rel="shortcut icon" href="https://cafe.summer.today/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://cafe.summer.today/media/css/tailwind.css">
+<link rel="stylesheet" href="https://cafe.summer.today/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Summer Lee - Atom Feed" href="https://cafe.summer.today/atom.xml">
+
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EX4CEGLQEE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-EX4CEGLQEE');
+  </script>
+    
+
+  <meta name="description" content="Done is better than perfect." />
+</head>
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+
+    <div class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300" :class="{ 'scroll': scrolled }">
+  <div class="flex justify-end px-4">
+    <div class="w-8 h-8 flex justify-center items-center rounded-full md:hidden" @click="showMenu = !showMenu">
+      <i class="ri-close-line" v-show="showMenu"></i>
+      <i class="ri-menu-3-line" v-show="!showMenu"></i>
+    </div>
+  </div>
+  <nav class="max-w-4xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block" :class="`${ showMenu ? 'block' : 'hidden' }`">
+    
+      <a href="/" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        首页
+      </a>
+    
+      <a href="/archives" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        归档
+      </a>
+    
+      <a href="/tags" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        标签
+      </a>
+    
+      <a href="/post/about" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        关于
+      </a>
+    
+    <a href="https://cafe.summer.today/atom.xml" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+      RSS
+    </a>
+  </nav>
+</div>
+
+    <div class="max-w-4xl w-full mx-auto pt-32">
+      
+
+      <div class="shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
+        
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://cafe.summer.today/post/ubuntu-bu-shu-nextjs-and-strapi/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          Ubuntu 部署 Next.js &amp; Strapi
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2022-08-27</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        
+title:
+date:
+tags: []
+问题
+
+strapi yarn install 报错，better-sqlite3 构建错误。
+
+解决：yarn add better-sqlite3
+
+
+pm2 配置（yarn global ...
+      </div>
+      <a href="https://cafe.summer.today/post/ubuntu-bu-shu-nextjs-and-strapi/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://cafe.summer.today/post/mac-an-zhuang-sqlite3-shi-bai/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          Mac 安装 sqlite3 失败
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2022-03-29</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        
+环境
+
+macOS 12.3
+node 16.14.2
+npm 8.5.5
+
+
+安装 strapi
+
+npx create-strapi-app@latest strapi-test
+
+// 报错
+npm ERR! code 1
+npm ...
+      </div>
+      <a href="https://cafe.summer.today/post/mac-an-zhuang-sqlite3-shi-bai/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://cafe.summer.today/post/verdaccio-da-jian-si-you-npm-cang-ku/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          Verdaccio 搭建私有 npm 仓库
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2022-03-28</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        服务端配置
+
+环境：
+
+Ubuntu 20.04.4 LTS
+Node 16.14.2
+Npm 8.5.5
+Verdaccio v5.8.0
+
+
+Ubuntu 使用 NodeSource 安装指定 Node 版本，选择 16.x
+
+# Us...
+      </div>
+      <a href="https://cafe.summer.today/post/verdaccio-da-jian-si-you-npm-cang-ku/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://cafe.summer.today/post/npx-chuang-jian-react-bao-cuo/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          npx 创建 React 报错
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2022-03-09</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        // use node version 16.14.0
+nvm use lts/gallium
+
+// 创建 react app
+npx create-react-app project
+// 提示需要安装 create-react-app...
+      </div>
+      <a href="https://cafe.summer.today/post/npx-chuang-jian-react-bao-cuo/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://cafe.summer.today/post/ying-shi-zi-mu-de-zhi-zuo-yu-dao-ru/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          影视字幕的制作与导入
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2021-12-25</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        下载影视资源的时候，经常需要单独寻找字幕。通常都能找到合适的字幕文件，不过也还是会有遇到问题的时候。比如：
+
+发行版与导演剪辑版长度不同，某些片段字幕对不上。
+有些字幕对应的不是原版视频，而是裁剪后的视频，所以整体时间错位。
+分享给他人的时...
+      </div>
+      <a href="https://cafe.summer.today/post/ying-shi-zi-mu-de-zhi-zuo-yu-dao-ru/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://cafe.summer.today/post/github-fork-project/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          Github Fork Project
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2021-12-17</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        Fork
+
+打开一个他人的项目，点击 Fork，项目就会拷贝到你的账号下。
+克隆到本地：git clone &lt;项目地址&gt;
+
+注意，这里的项目地址要使用 SSH 而不是 HTTPS。否则后面 git push 的时候会报错提示账号...
+      </div>
+      <a href="https://cafe.summer.today/post/github-fork-project/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://cafe.summer.today/post/apache-you-hua-xiu-gai-zui-da-bing-fa-lian-jie/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          Windows 网页可能暂时无法连接
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2021-12-08</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        Windows 系统，浏览器访问网络提示：网页可能暂时无法连接，或者它已永久性地移动到了新网址。
+按 「win + r」键，打开运行。
+输入 「cmd」并回车，打开cmd命令提示符界面。
+依次输入以下命令：
+ipconfig /flushd...
+      </div>
+      <a href="https://cafe.summer.today/post/apache-you-hua-xiu-gai-zui-da-bing-fa-lian-jie/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://cafe.summer.today/post/ubuntu-pei-zhi-webdav/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          ubuntu 配置 WebDAV
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2021-07-10</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        nginx -V查看 nginx 当前版本和配置，看是否有 --with-http_dav_module。缺少 nginx-dav-ext-module 则需要重新编译安装。
+
+编译过程
+
+下载与当前版本匹配的 nginx 源码，我的是 1...
+      </div>
+      <a href="https://cafe.summer.today/post/ubuntu-pei-zhi-webdav/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://cafe.summer.today/post/joomla-an-zhuang-and-xiu-gai-phpmywind-flash-wen-jian-shang-chuan/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          Joomla 安装 &amp; 修改 phpmywind flash 文件上传
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2021-03-21</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        Joomla 安装第三步确认配置时，PHP配置中会建议关闭 输出缓冲（output_buffering），事实上保持默认的开启状态（4096 bytes）即可。
+参考：深入理解php的输出缓冲区(output buffer)
+体验
+Joom...
+      </div>
+      <a href="https://cafe.summer.today/post/joomla-an-zhuang-and-xiu-gai-phpmywind-flash-wen-jian-shang-chuan/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://cafe.summer.today/post/pip3-an-zhuang-emoji-bao-cuo/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          pip3 安装 emoji 报错
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2020-11-26</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        pip3 install emoji报错，提示ERROR: Could not install packages due to an EnvironmentError: Missing dependencies for SOCKS supp...
+      </div>
+      <a href="https://cafe.summer.today/post/pip3-an-zhuang-emoji-bao-cuo/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+  
+      </div>
+
+      
+  <div class="my-4 flex justify-between px-4 md:px-0">
+    
+      <a href="https://cafe.summer.today/" class="btn btn-white">
+        <i class="ri-arrow-left-line mr-4"></i>
+        上一页
+      </a>
+    
+    
+      <a href="https://cafe.summer.today/page/3/" class="btn btn-white">
+        下一页
+        <i class="ri-arrow-right-line ml-4"></i>
+      </a>
+    
+  </div>
+
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+</footer>
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cafe.summer.today/media/scripts/main.js"></script>
+</body>
+
+</html>

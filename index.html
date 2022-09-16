@@ -1,0 +1,395 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Summer Lee</title>
+<link rel="shortcut icon" href="https://cafe.summer.today/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://cafe.summer.today/media/css/tailwind.css">
+<link rel="stylesheet" href="https://cafe.summer.today/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Summer Lee - Atom Feed" href="https://cafe.summer.today/atom.xml">
+
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EX4CEGLQEE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-EX4CEGLQEE');
+  </script>
+    
+
+  <meta name="description" content="Done is better than perfect." />
+</head>
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+
+    <div class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300" :class="{ 'scroll': scrolled }">
+  <div class="flex justify-end px-4">
+    <div class="w-8 h-8 flex justify-center items-center rounded-full md:hidden" @click="showMenu = !showMenu">
+      <i class="ri-close-line" v-show="showMenu"></i>
+      <i class="ri-menu-3-line" v-show="!showMenu"></i>
+    </div>
+  </div>
+  <nav class="max-w-4xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block" :class="`${ showMenu ? 'block' : 'hidden' }`">
+    
+      <a href="/" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        首页
+      </a>
+    
+      <a href="/archives" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        归档
+      </a>
+    
+      <a href="/tags" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        标签
+      </a>
+    
+      <a href="/post/about" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        关于
+      </a>
+    
+    <a href="https://cafe.summer.today/atom.xml" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+      RSS
+    </a>
+  </nav>
+</div>
+
+    <div class="max-w-4xl w-full mx-auto ">
+      
+        <header class="flex py-16 md:py-32 mt-12 flex-col md:flex-row px-4 md:px-0 animated fadeIn">
+  <div class="flex-1 order-2 md:order-1 md:pr-16">
+    <div class="text-4xl font-bold text-center md:text-left">
+      Summer Lee
+    </div>
+    <div class="text-xl text-gray-500 mt-4 text-center md:text-left">
+      Done is better than perfect.
+    </div>
+    
+      <div class="mt-8 text-center md:text-left">
+        <a
+          href="/post/about" 
+          arget="_blank"
+          class="text-sm bg-yellow-50 dark:bg-indigo-500 dark:text-gray-700 font-semibold px-4 py-2 inline-block yellow-btn transition-fast rounded"
+        >LET&#39;S TALK!</a>
+      </div>
+    
+    
+      <div class="mt-8 flex items-center">
+        
+          <div class="text-gray-500 mr-2">
+            Hi 👉
+          </div>
+        
+        
+          
+            
+              <div class="relative mr-2 w-8 h-8 inline-flex items-center justify-center text-xl hover:bg-gray-200 transition-fast dark:hover:bg-gray-600 wechat">
+                <i class="ri-wechat-line"></i>
+                <img src="/media/images/custom-wechat.jpeg" alt="" class="absolute left-0 w-32" style="max-width: initial; top: 100%;" >
+              </div>
+            
+          
+        
+          
+            
+              <a href="mailto:lee@summer.today" target="_blank" class="mr-2 w-8 h-8 inline-flex items-center justify-center text-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast">
+                <i class="ri-mail-line"></i>
+              </a>
+            
+          
+        
+          
+            
+              <a href="https://github.com/lanruo942" target="_blank" class="mr-2 w-8 h-8 inline-flex items-center justify-center text-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast">
+                <i class="ri-github-line"></i>
+              </a>
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    
+  </div>
+  <div class="md:mx-8 flex-shrink-0 self-start rounded-full border-4 border-dotted border-transparent hover:border-yellow-50 p-2 w-32 h-32 order-1 md:order-2 mx-auto s3-dotted">
+    <img class="rounded-full object-cover" src="https://cafe.summer.today/images/avatar.png?v=1663327710596" alt="Summer Lee" width="100%" height="100%">
+  </div>
+</header>
+      
+
+      <div class="shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
+        
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://cafe.summer.today/post/gou-gu-ding-li-zheng-ming/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          勾股定理证明
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2022-09-13</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        
+勾股定理（英语：Pythagorean theorem / Pythagoras' theorem）是平面几何中一个基本而重要的定理。勾股定理说明，平面上的直角三角形的两条直角边的长度（较短直角边古称勾长、较长直角边古称股长）的平方和等于...
+      </div>
+      <a href="https://cafe.summer.today/post/gou-gu-ding-li-zheng-ming/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://cafe.summer.today/post/css-he-js-shi-xian-wen-ben-sheng-lue/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          CSS 和 JS 实现文本省略
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2022-09-13</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        CSS 实现
+单行文本省略
+用到的 CSS 属性：
+
+overflow：overflow 定义当一个元素的内容太大而无法适应 块级格式化上下文 的时候该做什么。它是 overflow-x 和 overflow-y 的简写属性。（默认值：vi...
+      </div>
+      <a href="https://cafe.summer.today/post/css-he-js-shi-xian-wen-ben-sheng-lue/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://cafe.summer.today/post/the-max-integer-size-in-v8-for-32-bit-systems/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          The max integer size in V8 for 32-bit systems
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2022-09-13</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        问题
+在 React 源码中，MAX_SIGNED_31_BIT_INT 值为 Math.pow(2, 30) - 1。
+有符号 32 位整型去除一位符号位还有 31 位，照理说最大值应该是 Math.pow(2, 31) - 1。
+注释中...
+      </div>
+      <a href="https://cafe.summer.today/post/the-max-integer-size-in-v8-for-32-bit-systems/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://cafe.summer.today/post/javascript-number/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          JavaScript Number
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2022-09-12</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        数字
+
+JavaScript 只有一种数值类型：number（数字），包括 ”整数” 和带小数的十进制数。此处 “整数” 之所以加引号是因为和其他语言不同，JavaScript 没有真正意义上的整数，这也是它一直以来为人诟病的地方。这种情况...
+      </div>
+      <a href="https://cafe.summer.today/post/javascript-number/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://cafe.summer.today/post/react-native-textinput-ios-pick-choose-my-own-password-but-value-not-cleared/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          React Native TextInput iOS pick “choose my own password” but value not cleared
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2022-09-07</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        问题解决
+// Add in your TextInput the props &quot;onEndEditing&quot;
+&lt;TextInput {...} onEndEditing={(event) =&gt; {
+		if ...
+      </div>
+      <a href="https://cafe.summer.today/post/react-native-textinput-ios-pick-choose-my-own-password-but-value-not-cleared/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://cafe.summer.today/post/react-zi-zu-jian-diao-yong-usecontext-huo-tong-guo-props-gai-bian-fu-zu-jian-zhuang-tai-yin-qi-suo-you-zi-zu-jian-de-chong-xin-xuan-ran/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          React 子组件调用 useContext 或通过 props 改变父组件状态引起所有子组件的重新渲染
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2022-09-03</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        
+React Native 项目。
+Search 子组件在输入内容时调用父组件的 setOrder 导致数据改变引起所有子组件的重新渲染。
+改变的数据与 Search 组件无关。
+相关的方法有:
+
+使用 React.memo 包装子组件，e...
+      </div>
+      <a href="https://cafe.summer.today/post/react-zi-zu-jian-diao-yong-usecontext-huo-tong-guo-props-gai-bian-fu-zu-jian-zhuang-tai-yin-qi-suo-you-zi-zu-jian-de-chong-xin-xuan-ran/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://cafe.summer.today/post/react-native-flatlist-xia-la-shua-xin-huo-qu-apollo-xin-shu-ju/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          React Native Flatlist 下拉刷新获取 Apollo 新数据
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2022-09-02</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        
+apollo/client useQuery 更新数据使用 updateQuery 回调，刷新数据使用 refetch()。
+已知 useCreateReview 会调用 useMutation 的 refetchQueries 更新 G...
+      </div>
+      <a href="https://cafe.summer.today/post/react-native-flatlist-xia-la-shua-xin-huo-qu-apollo-xin-shu-ju/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://cafe.summer.today/post/react-native-jian-pan-dan-qi-zhe-dang-textinput-wen-ti/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          React Native 键盘弹起遮挡 TextInput 问题
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2022-09-01</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        
+KeyboardAvoidingView 元素应该放在当前页面组件的最外层。
+注意设置 flex 属性，以及 inner 元素的 justifyContent 属性。
+参考：
+
+KeyboardAvoidingView not worki...
+      </div>
+      <a href="https://cafe.summer.today/post/react-native-jian-pan-dan-qi-zhe-dang-textinput-wen-ti/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://cafe.summer.today/post/jest-ce-shi-han-you-usenavigate-de-zu-jian-bao-cuo/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          Jest 测试含有 useNavigate() 的组件报错
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2022-09-01</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        
+渲染组件的时候 Jest 提示报错
+
+但是没有具体的错误原因说明，按照建议中的添加错误边界查找错误原因。
+在 utils 目录中新建 errorBoundary.js 文件，写入内容：
+
+import React from 'react'...
+      </div>
+      <a href="https://cafe.summer.today/post/jest-ce-shi-han-you-usenavigate-de-zu-jian-bao-cuo/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://cafe.summer.today/post/axios-huo-qu-github-api-bao-cuo/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          Axios 获取 Github API 报错
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2022-08-30</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        背景
+
+配置后端 API rate-repository-api 。
+
+问题
+
+node 切换多个 16.x 版本，使用 npm 依然报错。切换 yarn 后正常。
+按照项目的 README 文件进行配置。
+yarn start 5000 ...
+      </div>
+      <a href="https://cafe.summer.today/post/axios-huo-qu-github-api-bao-cuo/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+  
+      </div>
+
+      
+  <div class="my-4 flex justify-between px-4 md:px-0">
+    
+    
+      <a href="https://cafe.summer.today/page/2" class="btn btn-white">
+        下一页
+        <i class="ri-arrow-right-line ml-4"></i>
+      </a>
+    
+  </div>
+
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+</footer>
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cafe.summer.today/media/scripts/main.js"></script>
+</body>
+
+</html>

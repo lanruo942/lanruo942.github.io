@@ -1,0 +1,442 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>华硕路由器文件共享跨域问题总结 - Summer Lee</title>
+<link rel="shortcut icon" href="https://cafe.summer.today/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://cafe.summer.today/media/css/tailwind.css">
+<link rel="stylesheet" href="https://cafe.summer.today/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="华硕路由器文件共享跨域问题总结 - Summer Lee - Atom Feed" href="https://cafe.summer.today/atom.xml">
+
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EX4CEGLQEE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-EX4CEGLQEE');
+  </script>
+    
+
+  <meta name="description" content="需求及问题
+
+需要存储10GB左右的原型图
+需要用版本控制
+Coding 最高会员的存储容量只有 5GB
+
+工具
+
+现有ASUS AC86u 路由器一台
+固件版本为梅林改版固件384.9
+一块机械硬盘
+
+网络情况
+所有电脑有线连接至 TP-..." />
+  <meta property="og:title" content="华硕路由器文件共享跨域问题总结 - Summer Lee">
+  <meta property="og:description" content="需求及问题
+
+需要存储10GB左右的原型图
+需要用版本控制
+Coding 最高会员的存储容量只有 5GB
+
+工具
+
+现有ASUS AC86u 路由器一台
+固件版本为梅林改版固件384.9
+一块机械硬盘
+
+网络情况
+所有电脑有线连接至 TP-..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://cafe.summer.today/post/hua-shuo-lu-you-qi-wen-jian-gong-xiang-kua-yu-wen-ti-zong-jie/" />
+  <meta property="og:image" content="https://cafe.summer.today/images/avatar.png">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="华硕路由器文件共享跨域问题总结 - Summer Lee">
+  <meta name="twitter:description" content="需求及问题
+
+需要存储10GB左右的原型图
+需要用版本控制
+Coding 最高会员的存储容量只有 5GB
+
+工具
+
+现有ASUS AC86u 路由器一台
+固件版本为梅林改版固件384.9
+一块机械硬盘
+
+网络情况
+所有电脑有线连接至 TP-...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://cafe.summer.today/post/hua-shuo-lu-you-qi-wen-jian-gong-xiang-kua-yu-wen-ti-zong-jie/">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+ 
+  
+    <link rel="stylesheet" href="https://cafe.summer.today/media/css/prism-atom-dark.css">
+  
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://cafe.summer.today" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      Summer Lee
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          华硕路由器文件共享跨域问题总结
+        </h1>
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4">2019-04-03 · 5 min read</div>
+          
+            <a href="https://cafe.summer.today/tag/C0aK5Wh4u/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              Router
+            </a>
+          
+            <a href="https://cafe.summer.today/tag/s-8dpfIRH8/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              Samba
+            </a>
+          
+            <a href="https://cafe.summer.today/tag/abbLmYNq2V/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              NFS
+            </a>
+          
+            <a href="https://cafe.summer.today/tag/h3nTnWAHmX/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              OpenVPN
+            </a>
+          
+        </div>
+        <div class="markdown mb-8" v-pre>
+          <h2 id="需求及问题">需求及问题</h2>
+<ul>
+<li>需要存储10GB左右的原型图</li>
+<li>需要用版本控制</li>
+<li>Coding 最高会员的存储容量只有 5GB</li>
+</ul>
+<h2 id="工具">工具</h2>
+<ul>
+<li>现有ASUS AC86u 路由器一台</li>
+<li>固件版本为梅林改版固件384.9</li>
+<li>一块机械硬盘</li>
+</ul>
+<h2 id="网络情况">网络情况</h2>
+<p>所有电脑有线连接至 TP-LINK 企业级路由器，IP池为 <code>192,168.255.x</code>。AC86u WAN口连接至TP-LINK，IP池为 <code>192.168.50.x</code>。</p>
+<hr>
+<h2 id="方案">方案</h2>
+<h3 id="0x01-samba网络共享">0x01 Samba网络共享</h3>
+<p>首先想到的是使用smb共享，因为ftp不太安全以及传输速度不高，使用的smb协议版本是SMBv2。配置好后255网段下的Windows电脑无法找到smb主机，且Ping无响应。</p>
+<p>后来发现是AC86u防火墙没有开启 <code>响应ICMP Echo（Ping）要求</code>。开启后即可Ping通，但是smb依然无法找到主机，考虑是没有开启端口转发的问题。</p>
+<h3 id="0x02-nfs-exports">0x02 NFS Exports</h3>
+<p>由于考虑到Windows系统 <code>添加一个网络位置</code> 中没有明确标明是否支持smb连接，再考虑到NFS无需输入密码的便捷性，所以尝试使用NFS共享服务。</p>
+<p>NFS共享配置好后连接50网段可以正常连接，连接255网段无响应，故通过端口转发实现跨网段访问。</p>
+<p>通过执行 netstat 命令可知 AC86u NFS 共享用到的进程有：</p>
+<ul>
+<li>nfsd 端口：2049</li>
+<li>portmap 端口：111</li>
+<li>mountd 非固定端口</li>
+<li>statd 非固定端口</li>
+<li>lockd 无此进程</li>
+</ul>
+<h4 id="端口映射">端口映射</h4>
+<p>一开始不知道这两个进程是非固定端口，进行端口映射，实现跨网段链接。</p>
+<p>然后测试255网段 tcping，发现这些端口都 ping！不！通！ 考虑防火墙限制了这些端口，关闭防火墙，然后就 ping 通了，<code>mount -t nfs 192.168.255.116:/mnt/Asuna/JIUJIEFILES ~/nfs</code> 挂载成功。</p>
+<p>但是一打开防火墙就不行了，所以下面进行 iptables 配置环节。</p>
+<h4 id="iptables">IPTABLES</h4>
+<p>为了防止 IPTABLES 系统列表被改的乱七八糟，参考 <a href="http://koolshare.cn/thread-104897-1-1.html">为你的梅林配置入站白名单防火墙(基于iptables)</a> 进行配置，然后再添加自己需要的规则。</p>
+<p>netstat 查看所需服务的端口后添加规则，运行可执行文件后 255 网段 tcping 测试这些端口都是 open 状态，但，死活就是连不上。百思不得其解之际重新运行 netstat 命令发现 mountd 和 statd 的端口都变了，查看 <code>/etc/services</code> 文件发现没有绑定这两个服务的端口号。</p>
+<h4 id="端口绑定">端口绑定</h4>
+<p>非固定端口进程由于每次重启都会随机更换端口，所以无法进行端口转发，必须先讲服务的端口进行绑定。</p>
+<p>Linux系统中绑定进程需要修改 <code>/etc/services</code> 文件，在文件末尾添加如下内容并保存</p>
+<pre><code># nfs服务进程端口绑定
+mountd 47010/tcp
+mountd 47010/udp
+statd 47011/tcp
+statd 47011/udp
+</code></pre>
+<p>想法挺好，BUT <code>services is read only</code>，ls查看文件权限，是指向 <code>/rom/etc/services</code> 的软连接，进行修改继续提示只读。移动 <code>/etc/services</code> 为 <code>/etc/services_bak</code>，复制 <code>/etc/services_bak</code> 为 <code>/etc/services</code>，修改内容，保存成功。</p>
+<p>重启NFS服务，端口绑定并没有生效。重启路由器，<code>/etc</code> 目录下所有文件还原🤦‍♂️，无解。</p>
+<p>思考能否通过nfs的配置文件来绑定服务端口，经查NFS服务在Linux中有两个配置文件：</p>
+<ul>
+<li>/etc/exports</li>
+<li>/etc/sysconfig/nfs</li>
+</ul>
+<p>第一个文件用来更改nfs共享的目录权限配置，在 AC86u 中找不到第二个配置文件，无法更改 nfs 服务的默认端口。</p>
+<p>然后想到 smb 服务的端口是固定的 137:139,445，所以还是决定用 smb 跨域。无意间看到有人说映射 445 端口访问 smb 不安全，推荐使用 <code>PPTP VPN Server</code>，正好 AC86u 支持 PPTP VPN、OpenVPN、IPSec VPN，既然 OpenVPN 最安全，那就用它了。</p>
+<h2 id="openvpn">OpenVPN</h2>
+<p>配置好后添加用户，导出 OpenVPN 配置文件，255 段电脑下载 OpenVPN 连接工具（Mac：Tunnelblick），打开导入配置文件，输入已经添加的用户密码，连接成功后直接用 50 网段挂载 NFS 服务即可。</p>
+<h2 id="总结">总结</h2>
+<p>果然VPN（虚拟专用网）治百病，知识还是掌握的少啊。</p>
+<hr>
+<p>参考资料：</p>
+<p>[2]: <a href="https://wajd.ml/asus-ac88u-mei-lin-gu-jian-zhe-teng-zhi-ftp/">Asus AC88U 梅林固件折腾之-外网访问FTP</a></p>
+<p>[3]: [iptables命令详解]https://wangchujiang.com/linux-command/c/iptables.html)</p>
+
+        </div>
+        <!-- Share to Twitter, Weibo, Telegram -->
+        <div class="flex items-center">
+          <div class="mr-4 flex items-center">
+            <i class="ri-share-forward-line text-gray-500"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-blue-500 hover:bg-blue-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTwitter">
+            <i class="ri-twitter-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-red-500 hover:bg-red-100 dark:hover:bg-gray-600 inline-flex" @click="shareToWeibo">
+            <i class="ri-weibo-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-indigo-500 hover:bg-indigo-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTelegram">
+            <i class="ri-telegram-line"></i>
+          </div>
+        </div>
+      </div>
+
+      
+        
+
+        
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/disqusjs@1.3/dist/disqusjs.css">
+<script type="application/javascript" src="https://cdn.jsdelivr.net/npm/disqusjs@1.3/dist/disqus.js"></script>
+<script type="application/javascript" src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+<script type="application/javascript" src="https://cdn.jsdelivr.net/npm/whatwg-fetch@3.0.0/dist/fetch.umd.min.js"></script>
+
+<div id="disqus_thread"></div>
+
+<script type="application/javascript">
+
+var options = {
+  shortname: 'summer-lee',
+  apikey: 'slwZK7rHlYsCAVg9tavZ4TBOR8efGDfR1OjXfrUNwgRk7k9EpulkeMT5hyPd8god',
+}
+if ('https://disqus.lanruo942.workers.dev/api/') {
+  options.api = 'https://disqus.lanruo942.workers.dev/api/'
+}
+var dsqjs = new DisqusJS(options)
+
+</script>
+
+        
+      
+
+      
+
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+</footer>
+    </div>
+
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E9%9C%80%E6%B1%82%E5%8F%8A%E9%97%AE%E9%A2%98">需求及问题</a></li>
+<li><a href="#%E5%B7%A5%E5%85%B7">工具</a></li>
+<li><a href="#%E7%BD%91%E7%BB%9C%E6%83%85%E5%86%B5">网络情况</a></li>
+<li><a href="#%E6%96%B9%E6%A1%88">方案</a>
+<ul>
+<li><a href="#0x01-samba%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB">0x01 Samba网络共享</a></li>
+<li><a href="#0x02-nfs-exports">0x02 NFS Exports</a>
+<ul>
+<li><a href="#%E7%AB%AF%E5%8F%A3%E6%98%A0%E5%B0%84">端口映射</a></li>
+<li><a href="#iptables">IPTABLES</a></li>
+<li><a href="#%E7%AB%AF%E5%8F%A3%E7%BB%91%E5%AE%9A">端口绑定</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#openvpn">OpenVPN</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </div>
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+  <!-- Background of PhotoSwipe. 
+        It's a separate element as animating opacity is faster than rgba(). -->
+  <div class="pswp__bg">
+  </div>
+  <!-- Slides wrapper with overflow:hidden. -->
+  <div class="pswp__scroll-wrap">
+    <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+    <div class="pswp__container">
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+    </div>
+    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+    <div class="pswp__ui pswp__ui--hidden">
+      <div class="pswp__top-bar">
+        <!--  Controls are self-explanatory. Order can be changed. -->
+        <div class="pswp__counter">
+        </div>
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+        <!-- element will get class pswp__preloader--active when preloader is running -->
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip">
+        </div>
+      </div>
+      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+      </button>
+      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+      </button>
+      <div class="pswp__caption">
+        <div class="pswp__caption__center">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cafe.summer.today/media/scripts/main.js"></script>
+  
+  <!-- Code Highlight -->
+  
+    <script src="https://cafe.summer.today/media/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+  <script>
+    //拿到预览框架，也就是上面的html代码
+    var pswpElement = document.querySelectorAll('.pswp')[0];
+    //定义图片数组变量
+    var imgitems;
+    /**
+    * 用于显示预览界面
+    * @param index 图片数组下标
+    */
+    function viewImg(index) {
+      //其它选项这里不做过多阐述，详情见官网
+      var pswpoptions = {
+        index: parseInt(index, 10), // 开始幻灯片索引。0是第一张幻灯片。必须是整数，而不是字符串。
+        bgOpacity: 0.7, // 背景透明度，0-1
+        maxSpreadZoom: 3, // 缩放级别，不要太大
+      };
+      //初始化并打开PhotoSwipe，pswpElement对应上面预览框架，PhotoSwipeUI_Default为皮肤，imgitems为图片数组，pswpoptions为选项
+      var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, imgitems, pswpoptions);
+      gallery.init()
+    }
+    /**
+    * 用于添加图片点击事件
+    * @param img 图片元素
+    * @param index 所属下标（在imgitems中的位置）
+    */
+    function addImgClick(img, index) {
+      img.onclick = function() {
+        viewImg(index)
+      }
+    }
+    /**
+    * 轮询所有图片，获取src、width、height等数据，加入imgitems，并给图片元素添加事件
+    * 最好在onload中执行该方法，本站因放在最底部，所以直接初始化
+    * 异步加载图片可在图片元素创建完成后调用此方法
+    */
+    function initImg() {
+      //重置图片数组
+      imgitems = [];
+      //查找class:markdown 下的所有img元素并遍历
+      var imgs = document.querySelectorAll('.markdown img');
+      for (var i = 0; i < imgs.length; i++) {
+        var img = imgs[i];
+        //本站相册初始为loading图片，真实图片放在data-src
+        var ds = img.getAttribute("data-src");
+        //创建image对象，用于获取图片宽高
+        var imgtemp = new Image();
+        //判断是否存在data-src
+        if (ds != null && ds.length > 0) {
+          imgtemp.src = ds
+        } else {
+          imgtemp.src = img.src
+        }
+        //判断是否存在缓存
+        if (imgtemp.complete) {
+          var imgobj = {
+            "src": imgtemp.src,
+            "w": imgtemp.width,
+            "h": imgtemp.height,
+          };
+          imgitems[i] = imgobj;
+          addImgClick(img, i);
+        } else {
+          imgtemp.index = i;
+          imgtemp.img = img;
+          imgtemp.onload = function() {
+            var imgobj = {
+              "src": this.src,
+              "w": this.width,
+              "h": this.height,
+            };
+            //不要使用push，因为onload前后顺序会不同
+            imgitems[this.index] = imgobj
+            //添加点击事件
+            addImgClick(this.img, this.index);
+          }
+        }
+      }
+    }
+    //初始化
+    initImg();
+  </script>
+  
+  
+    
+  
+</body>
+
+</html>

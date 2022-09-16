@@ -1,0 +1,363 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Summer Lee</title>
+<link rel="shortcut icon" href="https://cafe.summer.today/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://cafe.summer.today/media/css/tailwind.css">
+<link rel="stylesheet" href="https://cafe.summer.today/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Summer Lee - Atom Feed" href="https://cafe.summer.today/atom.xml">
+
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EX4CEGLQEE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-EX4CEGLQEE');
+  </script>
+    
+
+  <meta name="description" content="Done is better than perfect." />
+</head>
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+
+    <div class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300" :class="{ 'scroll': scrolled }">
+  <div class="flex justify-end px-4">
+    <div class="w-8 h-8 flex justify-center items-center rounded-full md:hidden" @click="showMenu = !showMenu">
+      <i class="ri-close-line" v-show="showMenu"></i>
+      <i class="ri-menu-3-line" v-show="!showMenu"></i>
+    </div>
+  </div>
+  <nav class="max-w-4xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block" :class="`${ showMenu ? 'block' : 'hidden' }`">
+    
+      <a href="/" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        首页
+      </a>
+    
+      <a href="/archives" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        归档
+      </a>
+    
+      <a href="/tags" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        标签
+      </a>
+    
+      <a href="/post/about" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        关于
+      </a>
+    
+    <a href="https://cafe.summer.today/atom.xml" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+      RSS
+    </a>
+  </nav>
+</div>
+
+    <div class="max-w-4xl w-full mx-auto pt-32">
+      <div class="py-8 shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/gou-gu-ding-li-zheng-ming/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                勾股定理证明
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/css-he-js-shi-xian-wen-ben-sheng-lue/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                CSS 和 JS 实现文本省略
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/the-max-integer-size-in-v8-for-32-bit-systems/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                The max integer size in V8 for 32-bit systems
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/javascript-number/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                JavaScript Number
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/react-native-textinput-ios-pick-choose-my-own-password-but-value-not-cleared/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                React Native TextInput iOS pick “choose my own password” but value not cleared
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/react-zi-zu-jian-diao-yong-usecontext-huo-tong-guo-props-gai-bian-fu-zu-jian-zhuang-tai-yin-qi-suo-you-zi-zu-jian-de-chong-xin-xuan-ran/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                React 子组件调用 useContext 或通过 props 改变父组件状态引起所有子组件的重新渲染
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/react-native-flatlist-xia-la-shua-xin-huo-qu-apollo-xin-shu-ju/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                React Native Flatlist 下拉刷新获取 Apollo 新数据
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/react-native-jian-pan-dan-qi-zhe-dang-textinput-wen-ti/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                React Native 键盘弹起遮挡 TextInput 问题
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/jest-ce-shi-han-you-usenavigate-de-zu-jian-bao-cuo/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Jest 测试含有 useNavigate() 的组件报错
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/axios-huo-qu-github-api-bao-cuo/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Axios 获取 Github API 报错
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/ubuntu-bu-shu-nextjs-and-strapi/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Ubuntu 部署 Next.js &amp; Strapi
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/mac-an-zhuang-sqlite3-shi-bai/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Mac 安装 sqlite3 失败
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/verdaccio-da-jian-si-you-npm-cang-ku/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Verdaccio 搭建私有 npm 仓库
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/npx-chuang-jian-react-bao-cuo/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                npx 创建 React 报错
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/ying-shi-zi-mu-de-zhi-zuo-yu-dao-ru/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                影视字幕的制作与导入
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/github-fork-project/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Github Fork Project
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/apache-you-hua-xiu-gai-zui-da-bing-fa-lian-jie/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Windows 网页可能暂时无法连接
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/ubuntu-pei-zhi-webdav/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                ubuntu 配置 WebDAV
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/joomla-an-zhuang-and-xiu-gai-phpmywind-flash-wen-jian-shang-chuan/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Joomla 安装 &amp; 修改 phpmywind flash 文件上传
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/pip3-an-zhuang-emoji-bao-cuo/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                pip3 安装 emoji 报错
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/code-server-pei-zhi/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                code-server 配置
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/blink-shell-shi-yong/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Blink Shell 使用
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/cloudflare-hsts-pei-zhi/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Cloudflare HSTS 配置
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/js-yin-le-qie-huan/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                JS 音乐切换
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/kkbox-sdk-shi-yong/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                kkbox sdk 使用
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/mou-xiang-mu-swf-zhuan-html5-guo-cheng/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                某项目 swf 转 html5 过程
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/hua-shuo-lu-you-qi-wen-jian-gong-xiang-kua-yu-wen-ti-zong-jie/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                华硕路由器文件共享跨域问题总结
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/hello-gridea/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Hello Gridea
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/javascript-zhong-undefined-yu-null-de-qu-bie/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                JavaScript 中 undefined 与 null 的区别
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/mac-xia-laradock-pei-zhi-ji-lu/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Mac 下 Laradock 配置记录
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/yii20-kuang-jia-huan-jing-da-jian-ji-lu/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                Yii2.0 框架环境搭建记录
+              </a>
+            </div>
+          </div>
+        
+          <div class="px-8 pb-5 flex relative overflow-hidden">
+            
+            <div class="flex-1">
+              <a href="https://cafe.summer.today/post/weui-huan-jing-pei-zhi/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+                WeUI 环境配置
+              </a>
+            </div>
+          </div>
+        
+      </div>
+
+      
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+</footer>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cafe.summer.today/media/scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,875 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://cafe.summer.today</id>
+    <title>Summer Lee</title>
+    <updated>2022-09-16T11:28:34.270Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://cafe.summer.today"/>
+    <link rel="self" href="https://cafe.summer.today/atom.xml"/>
+    <subtitle>Done is better than perfect.</subtitle>
+    <logo>https://cafe.summer.today/images/avatar.png</logo>
+    <icon>https://cafe.summer.today/favicon.ico</icon>
+    <rights>All rights reserved 2022, Summer Lee</rights>
+    <entry>
+        <title type="html"><![CDATA[勾股定理证明]]></title>
+        <id>https://cafe.summer.today/post/gou-gu-ding-li-zheng-ming/</id>
+        <link href="https://cafe.summer.today/post/gou-gu-ding-li-zheng-ming/">
+        </link>
+        <updated>2022-09-13T11:20:13.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>勾股定理（英语：Pythagorean theorem / Pythagoras' theorem）是平面几何中一个基本而重要的定理。勾股定理说明，平面上的直角三角形的两条直角边的长度（较短直角边古称勾长、较长直角边古称股长）的平方和等于斜边长（古称弦长）的平方。反之，若平面上三角形中两边长的平方和等于第三边边长的平方，则它是直角三角形（直角所对的边是第三边）。<br>
+此定理又称毕氏定理、商高定理、毕达哥拉斯定理。<br>
+—— Wikipedia</p>
+</blockquote>
+<h2 id="发现">发现</h2>
+<h3 id="中国">中国</h3>
+<ol>
+<li>《周髀算经》西周初数学家，商高。没有写证明方法。</li>
+<li>《周髀算经注》三国，赵爽。证明方法：勾股圆方图。</li>
+</ol>
+<h3 id="古希腊">古希腊</h3>
+<ol>
+<li>毕达哥拉斯。</li>
+<li>欧几里德，《几何原本》。</li>
+</ol>
+<figure data-type="image" tabindex="1"><img src="https://cafe.summer.today/post-images/1663075533953.png" alt="《几何原本》中的证明|300" loading="lazy"></figure>
+<h2 id="定理">定理</h2>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup><mo>=</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">a^{2} + b^{2} = c^{2}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9474379999999999em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8641079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">b</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8641079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>或</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msqrt><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow></msqrt><mo>=</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">\sqrt{a^{2} + b^{2}} = c
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2399999999999998em;vertical-align:-0.177736em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0622639999999999em;"><span class="svg-align" style="top:-3.2em;"><span class="pstrut" style="height:3.2em;"></span><span class="mord" style="padding-left:1em;"><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.740108em;"><span style="top:-2.9890000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathdefault">b</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.740108em;"><span style="top:-2.9890000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.0222640000000003em;"><span class="pstrut" style="height:3.2em;"></span><span class="hide-tail" style="min-width:1.02em;height:1.28em;"><svg width='400em' height='1.28em' viewBox='0 0 400000 1296' preserveAspectRatio='xMinYMin slice'><path d='M263,681c0.7,0,18,39.7,52,119c34,79.3,68.167,
+158.7,102.5,238c34.3,79.3,51.8,119.3,52.5,120c340,-704.7,510.7,-1060.3,512,-1067
+c4.7,-7.3,11,-11,19,-11H40000v40H1012.3s-271.3,567,-271.3,567c-38.7,80.7,-84,
+175,-136,283c-52,108,-89.167,185.3,-111.5,232c-22.3,46.7,-33.8,70.3,-34.5,71
+c-4.7,4.7,-12.3,7,-23,7s-12,-1,-12,-1s-109,-253,-109,-253c-72.7,-168,-109.3,
+-252,-110,-252c-10.7,8,-22,16.7,-34,26c-22,17.3,-33.3,26,-34,26s-26,-26,-26,-26
+s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.177736em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">c</span></span></span></span></span></p>
+<h2 id="证明">证明</h2>
+<h3 id="勾股圆方图">勾股圆方图</h3>
+<figure data-type="image" tabindex="2"><img src="https://cafe.summer.today/post-images/1663075570527.png" alt="|300" loading="lazy"></figure>
+<p>将四个直角三角形拼成如图，由于直角三角形另外两角和为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>9</mn><msup><mn>0</mn><mo>∘</mo></msup></mrow><annotation encoding="application/x-tex">90^\circ</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.674115em;vertical-align:0em;"></span><span class="mord">9</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.674115em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∘</span></span></span></span></span></span></span></span></span></span></span> ，所以拼成的是正方形。</p>
+<p class='katex-block katex-error' title='ParseError: KaTeX parse error: No such environment: align* at position 7: \begin{̲a̲l̲i̲g̲n̲*̲}̲
+&amp; \because {大正…'>\begin{align*}
+&amp; \because {大正方形面积等于四个三角形加上小正方形} \\
+&amp; \therefore S_{大\Box} = 4 \times S_{\triangle} + S_{小\Box} \\
+&amp; \because {正方形面积等于边长的平方，三角形面积等于底乘高除以二} \\
+&amp; \therefore c^{2} = 4 \times \frac{1}{2}ab + (b - a)^{2} \\
+&amp; \therefore c^{2} = 2ab + b^{2} - 2ab + a^{2} \\
+&amp; \therefore c^{2} = a^{2} + b^{2}
+\end{align*}
+</p>
+<h3 id="几何原本证明">几何原本证明</h3>
+<figure data-type="image" tabindex="3"><img src="https://cafe.summer.today/post-images/1663075601268.png" alt="证明辅助图|300" loading="lazy"></figure>
+<p>在欧几里德的《几何原本》一书中给出勾股定理的以下证明。设 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">△</mi><mi>A</mi><mi>B</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">\triangle ABC</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord">△</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span> 为一个直角三角形，其中 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span> 为直角。从 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span> 点画一直线至对边，使其垂直于对边。延长此线把对边上的正方形一分为二。其面积分别与其余两个正方形相等。<br>
+在定理的证明中，我们需要如下四个辅助定理：</p>
+<ul>
+<li>如果两个三角形有两组对应边和这两组边所夹的角相等，则两三角形全等。（SAS 定理）</li>
+<li>三角形面积是任一同底同高之平行四边形面积的一半。</li>
+<li>任意一个正方形的面积等于其二边长的乘积。</li>
+<li>任意一个矩形的面积等于其二边长的乘积（据辅助定理 3）<br>
+证明的思路为：把上方的两个正方形，透过等高同底的三角形，以其面积关系，转换成下方两个同等面积的长方形。</li>
+</ul>
+<p>其证明如下：</p>
+<p class='katex-block katex-error' title='ParseError: KaTeX parse error: No such environment: align* at position 7: \begin{̲a̲l̲i̲g̲n̲*̲}̲
+&amp; 设 \triangle{…'>\begin{align*}
+&amp; 设 \triangle{ABC} 为一直角三角形，其直角为 \angle{CAB}。 \\
+&amp; 其边为\, \overline{BC}、\overline{AB} \,和\, \overline{CA}，依序绘成四方形\, CBED、BAGF \, 和\,ACIH。 \\
+&amp; 画出过点 A 之 \overline{BD}、\overline{CE} 的平行线。此线将分别与 \overline{BC} 和 \overline{DE} 直角相交于 K、L。 \\
+&amp; 分别连接 \overline{CF}、\overline{AD}，形成两个三角形 BCF、BDA。 \\
+&amp; \angle{CAB} 和 \angle{BAG} 都是直角，因此 C、A 和 G 都是共线的，同理可证 B、A 和 H 共线。 \\
+&amp; \angle{CBD} 和 \angle{FBA} 都是直角，所以 \angle{ABD} 相等于 \angle{FBC}。 \\
+&amp; \because \overline{AB} 和 \overline{BD} 分别等于 \overline{FB} 和 \overline{BC}，\therefore \triangle{ABD} 必须全等于 \triangle{FBC}。 \\
+&amp; \because A 与 K 和 L 在同一直线上，\therefore 四方形 BDLK 必须二倍面积于 \triangle{ABD}。 \\
+&amp; \because C、A 和 G 在同一直线上，\therefore 正方形 BAGF 必须二倍面积于 \triangle{FBC}。 \\
+&amp; 因此四边形 BDLK 必须和 BAGF 有相同的面积 = \overline{AB}^{2}。 \\
+&amp; 同理可证，四边形 CKLE 必须有相同的面积 ACIH = \overline{AC}^{2}。 \\
+&amp; 把这两个结果相加，\overline{AB}^{2} + \overline{AC}^{2} = \overline{BD} \times \overline{BK} + \overline{KL} \times \overline{KC} \\
+&amp; 由于 \overline{BD} = \overline{KL}，\overline{BD} \times \overline{BK} + \overline{KL} \times \overline{KC} = \overline{BD} \left ( \overline{BK} + \overline{KC} \right ) = \overline{BD} \times \overline{BC} \\
+&amp; 由于 CBDE 是个正方形，因此 \overline{AB}^{2} + \overline{AC}^{2} = \overline{BC}^{2}。
+\end{align*}
+</p>
+<p>简化证明：<br>
+<img src="https://cafe.summer.today/post-images/1663075617044.png" alt="|500" loading="lazy"></p>
+<p class='katex-block katex-error' title='ParseError: KaTeX parse error: No such environment: align* at position 7: \begin{̲a̲l̲i̲g̲n̲*̲}̲
+S_{BDCE} &amp; = S…'>\begin{align*}
+S_{BDCE} &amp; = S_{BDLK} + S_{CKLE} \\
+&amp; = 2S_{\triangle BDK} + 2S_{\triangle CEK} \\
+&amp; = 2S_{\triangle BDA} + 2S_{\triangle CEA} \\
+&amp; = 2S_{\triangle BCF} + 2S_{\triangle CBI} \\
+&amp; = 2S_{\triangle BFG} + 2S_{\triangle CIH} \\
+&amp; = S_{BAGF} + S_{ACIH}
+\end{align*}
+</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CSS 和 JS 实现文本省略]]></title>
+        <id>https://cafe.summer.today/post/css-he-js-shi-xian-wen-ben-sheng-lue/</id>
+        <link href="https://cafe.summer.today/post/css-he-js-shi-xian-wen-ben-sheng-lue/">
+        </link>
+        <updated>2022-09-13T07:19:12.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="css-实现">CSS 实现</h2>
+<h3 id="单行文本省略">单行文本省略</h3>
+<p>用到的 CSS 属性：</p>
+<ol>
+<li>overflow：overflow 定义当一个元素的内容太大而无法适应 <a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context">块级格式化上下文</a> 的时候该做什么。它是 overflow-x 和 overflow-y 的简写属性。（默认值：visible）</li>
+<li>text-overflow: 该属性用于确定如何提示用户存在隐藏的溢出内容。其形式可以是裁剪、显示一个省略号（“...“）或显示一个自定义的字符串。（默认值：clip）</li>
+</ol>
+<p>HTML：</p>
+<pre><code class="language-html">&lt;div class=&quot;text&quot;&gt;
+	不要以为， 我了解你， 也许我可以通过知识来看你， 但那不是你，
+	除非你愿意谈谈你自己， 否则我不知道你到底是谁。
+&lt;/div&gt;
+</code></pre>
+<p>CSS：</p>
+<pre><code class="language-css">.text {
+	width: 200px;
+	white-space: nowrap;
+	overflow: hidden; /* 超出部分隐藏 */
+	text-overflow: ellipsis; /* 提示显示省略号 */
+}
+</code></pre>
+<p>效果：<br>
+<img src="https://cafe.summer.today/post-images/1663057505547.png" alt="" loading="lazy"></p>
+<h3 id="多行文本省略">多行文本省略</h3>
+<p>用到的 CSS 属性：</p>
+<ol>
+<li>overflow：overflow 定义当一个元素的内容太大而无法适应 <a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context">块级格式化上下文</a> 的时候该做什么。它是 overflow-x 和 overflow-y 的简写属性。（默认值：visible）</li>
+<li>text-overflow: 该属性用于确定如何提示用户存在隐藏的溢出内容。其形式可以是裁剪、显示一个省略号（“...“）或显示一个自定义的字符串。（默认值：clip）</li>
+<li>-webkit-line-clamp：该属性可以把块容器中的内容限制为指定的行数。它只有在 display 属性设置成 <code>-webkit-box</code> 或者 <code>-webkit-inline-box</code> 并且 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-orient">-webkit-box-orient</a> 属性设置成 <code>vertical</code> 时才有效果。
+<ul>
+<li>在大部分情况下，也需要设置 overflow 属性为 <code>hidden</code>，否则，里面的内容不会被裁剪，并且在内容显示为指定行数后还会显示省略号。</li>
+<li>备注：此属性已实现，但有一些问题。它是旧标准的一种支持。<a href="https://www.w3.org/TR/css-overflow-3/#propdef--webkit-line-clamp">CSS Overflow Module Level 3</a> 规范还定义了一个 line-clamp 属性，用来代替此属性且避免一些问题。</li>
+</ul>
+</li>
+<li>box-orient: 该属性用来设置一个元素是水平还是垂直布局其内容。
+<ul>
+<li>⚠️ 非标准：该特性是非标准的，请尽量不要在生产环境中使用它！</li>
+<li>这是原始的 css 弹性布局草案的一个属性，已经被最新的标准替代。查看 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">flexbox</a> 了解现行标准。</li>
+</ul>
+</li>
+</ol>
+<p>HTML：</p>
+<pre><code class="language-html">&lt;div class=&quot;multi-text&quot;&gt;
+	现在的人们不管是看电影还是买书， 都要先上网查查排行榜和评价，
+	甚至有人去电影院售票口买票， 会先问售票员这部电影有没有让人感动的地方，
+	或许以后的人连交个女朋友都得先上网查查评价。
+&lt;/div&gt;
+</code></pre>
+<p>CSS：</p>
+<pre><code class="language-css">.multi-text {
+	width: 200px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+</code></pre>
+<p>效果：<br>
+<img src="https://cafe.summer.today/post-images/1663057516173.png" alt="" loading="lazy"></p>
+<hr>
+<h2 id="js-实现多行文本省略">JS 实现多行文本省略</h2>
+<p>原理：逐个增加文本字数，比较何时文本的高度超过容器的高度。</p>
+<p>用到的 CSS 属性：</p>
+<ol>
+<li>overflow-wrap：该属性是用来说明当一个不能被分开的字符串太长而不能填充其包裹盒时，为防止其溢出，浏览器是否允许这样的单词中断换行。</li>
+</ol>
+<p>用到的 JS 方法：</p>
+<ol>
+<li>scrollHeight：<code>Element.scrollHeight</code> 这个只读属性是一个元素内容高度的度量，<strong>包括由于溢出导致的视图中不可见的内容</strong>。</li>
+<li>offsetheight：<code>HTMLElement.offsetHeight</code> 是一个只读属性，它返回该元素的像素高度，高度包含该元素的垂直内边距和边框，且是一个整数。
+<ul>
+<li>通常，元素的 offsetHeight 是一种元素 CSS 高度的衡量标准，包括元素的边框、内边距和元素的水平滚动条（如果存在且渲染的话），不包含 <code>:before</code> 或 <code>:after</code> 等伪类元素的高度。</li>
+<li>备注：这个属性值会被四舍五入为整数值，如果你需要一个浮点数值，请用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/getBoundingClientRect">element.getBoundingClientRect</a>。</li>
+</ul>
+</li>
+<li>textContent：Node 接口的 textContent 属性表示一个节点及其后代的文本内容。
+<ul>
+<li>textContent 的值取决于具体情况：
+<ul>
+<li>如果节点是一个 document，或者一个 DOCTYPE，则返回 <code>null</code>。（备注：如果要获取整个文档的文本以及 CDATA data，可以使用 <code>document.documentElement.textContent</code>）</li>
+<li>如果节点是个 CDATA section、注释、processing instruction 或者 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/createTextNode">text node</a>，则返回节点内部的文本内容，例如 <code>Node.nodeValue</code>。</li>
+<li>对于其他节点类型，<code>textContent</code> 将所有子节点的 <code>textContent</code> 合并后返回，除了注释和 processing instructions。（如果该节点没有子节点的话，返回一个空字符串。）</li>
+</ul>
+</li>
+<li>在节点上设置 <code>textContent</code> 属性，会删除它的所有子节点，并替换为一个具有给定值的文本节点。</li>
+<li>与 innerText 的区别：
+<ul>
+<li><code>textContent</code> 会获取所有元素的内容，包括 <code>&lt;script&gt;</code> 和 <code>&lt;style&gt;</code> 元素，然而 <code>innerText</code> 只获取展示给人看的元素。</li>
+<li><code>textContent</code> 会返回节点中的每一个元素。相反，<code>innerText</code> 受 CSS 样式的影响，并且不会返回隐藏元素的文本。
+<ul>
+<li>此外，由于 <code>innerText</code> 受 CSS 样式的影响，它会触发回流（reflow）去确保是最新的计算样式。（回流在计算上可能会非常昂贵，因此应尽可能避免。）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>与 innerHTML 的区别：
+<ul>
+<li><code>Element.innerHTML</code> 返回 HTML。通常，为了在元素中检索或写入文本，人们使用 <code>innerHTML</code>。但是，<code>textContent</code> 通常具有更好的性能，因为文本不会被解析为 HTML。</li>
+<li>此外，使用 <code>textContent</code> 可以防止 <a href="https://developer.mozilla.org/zh-CN/docs/Glossary/Cross-site_scripting">XSS 攻击</a> 。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>HTML：</p>
+<pre><code class="language-html">&lt;div id=&quot;container&quot;&gt;
+	我一辈子都弄不明白， 如果一个人真的有什么感悟的话，
+	他为什么非得用语言把它表达出来呢？ 事实上， 我总觉得——
+	但愿你还明白我说的话—— 如果一个人把感受转化为语言后，
+	那份感受就会失去些什么东西。
+&lt;/div&gt;
+</code></pre>
+<p>CSS：</p>
+<pre><code class="language-css">#container {
+	border: 1px solid red;
+	height: 100px;
+	width: 200px;
+	overflow-wrap: break-word;
+}
+</code></pre>
+<p>JS：</p>
+<pre><code class="language-js">window.addEventListener('load', function () {
+	let container = document.getElementById('container');
+	let str = container.textContent;
+
+	if (container.scrollHeight &gt; container.offsetHeight) {
+		for (let i = 0; i &lt;= str.length; i++) {
+			container.textContent = str.slice(0, i);
+			if (container.scrollHeight &gt; container.offsetHeight) {
+				container.textContent = str.slice(0, i - 2) + '...';
+				break;
+			}
+		}
+	}
+});
+</code></pre>
+<p>效果：<br>
+<img src="https://cafe.summer.today/post-images/1663057525959.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The max integer size in V8 for 32-bit systems]]></title>
+        <id>https://cafe.summer.today/post/the-max-integer-size-in-v8-for-32-bit-systems/</id>
+        <link href="https://cafe.summer.today/post/the-max-integer-size-in-v8-for-32-bit-systems/">
+        </link>
+        <updated>2022-09-13T04:21:27.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="问题">问题</h2>
+<p>在 React 源码中，<code>MAX_SIGNED_31_BIT_INT</code> 值为 <code>Math.pow(2, 30) - 1</code>。<br>
+有符号 32 位整型去除一位符号位还有 31 位，照理说最大值应该是 <code>Math.pow(2, 31) - 1</code>。<br>
+注释中提到：</p>
+<blockquote>
+<p>Max 31 bit integer. The max integer size in V8 for 32-bit systems.</p>
+</blockquote>
+<p>那么就看一下在 V8 引擎中是如何存储 32 位整型的。</p>
+<h2 id="原理">原理</h2>
+<p>在 32 位平台上，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi><mi>S</mi><mi>m</mi><mi>i</mi><mi>V</mi><mi>a</mi><mi>l</mi><mi>u</mi><mi>e</mi><mi>S</mi><mi>i</mi><mi>z</mi><mi>e</mi><mo>=</mo><mn>31</mn></mrow><annotation encoding="application/x-tex">kSmiValueSize = 31</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.04398em;">z</span><span class="mord mathdefault">e</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">1</span></span></span></span>。所以把它换为 30，计算得到 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi><mi>M</mi><mi>i</mi><mi>n</mi><mi>V</mi><mi>a</mi><mi>l</mi><mi>u</mi><mi>e</mi><mo>=</mo><mo>−</mo><msup><mn>2</mn><mn>30</mn></msup></mrow><annotation encoding="application/x-tex">kMinValue = -2^{30}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span><span class="mord mtight">0</span></span></span></span></span></span></span></span></span></span></span></span>。<br>
+为什么 Smis 在 32 位平台上的范围要小一点？在引擎 <a href="https://github.com/v8/v8/blob/a9e3d9c7ec1345085c861af76e508d9591634530/include/v8.h#L177">内部</a> ，V8 使用最低有效位将所有 JavaScript 值标记为堆栈对象或者 Smis。如果最低有效位是 1，则是指针。如果是 0，则是 Smi。这意味着 32 位整数只能使用 31 位存储 Smi 值，因为一位（最低有效位）用作标记。</p>
+<blockquote>
+<p>V8 使用最低有效位将所有值标记为 Smis 或堆指针。</p>
+</blockquote>
+<h2 id="参考">参考</h2>
+<p>[1]: <a href="https://medium.com/fhinkel/v8-internals-how-small-is-a-small-integer-e0badc18b6da">V8 Internals: How Small is a “Small Integer?”</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[JavaScript Number]]></title>
+        <id>https://cafe.summer.today/post/javascript-number/</id>
+        <link href="https://cafe.summer.today/post/javascript-number/">
+        </link>
+        <updated>2022-09-12T04:58:26.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="数字">数字</h2>
+<blockquote>
+<p>JavaScript 只有一种数值类型：number（数字），包括 ”整数” 和带小数的十进制数。此处 “整数” 之所以加引号是因为和其他语言不同，JavaScript 没有真正意义上的整数，这也是它一直以来为人诟病的地方。这种情况在将来或许会有所改观，但目前只有数字类型。<br>
+与大部分现代编程语言（包括几乎所有的脚本语言）一样，JavaScript 中的数字类型是基于 <a href="https://zh.wikipedia.org/wiki/IEEE_754">IEEE 754</a> 标准来实现的，该标准通常也被称为 “浮点数”。JavaScript 使用的是 “双精度” 格式（即 64 位二进制）。<br>
+—— 《你不知道的 JavaScript》</p>
+</blockquote>
+<h3 id="ieee-754">IEEE 754</h3>
+<p>IEEE 二进制浮点数算数标准（IEEE 754）是 20 世纪 80 年代以来最广泛使用的浮点数运算标准，为许多 CPU 与浮点运算器所采用。这个标准定义了表示浮点数的格式（包括负零 -0）与反常值（denormal number），一些特殊数值（无穷 Inf 与 非数值 NaN），以及这些数值的「浮点数运算子」；它也指明了四种 <a href="https://zh.wikipedia.org/wiki/%E6%95%B0%E5%80%BC%E4%BF%AE%E7%BA%A6">数值修约规则</a> 和五种例外情况（包括例外发生的时机与处理方式）。<br>
+IEEE 754 规定了四种表示浮点数值的方式：单精确度（32 位元）、双精确度（64 位元）、延伸单精确度（43 位元以上，很少使用）与延伸双精确度（79 位元以上，通常以 80 位元实做）。只有 32 位元模式有强制要求，其他都是选择性的。</p>
+<figure data-type="image" tabindex="1"><img src="https://cafe.summer.today/post-images/1663045826126.png" alt="IEEE 754 浮点数的三个域" loading="lazy"></figure>
+<h4 id="浮点数剖析">浮点数剖析</h4>
+<p>一个浮点数（Value）的表示其实可以这样表示：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>V</mi><mi>a</mi><mi>l</mi><mi>u</mi><mi>e</mi><mo>=</mo><mi>s</mi><mi>i</mi><mi>g</mi><mi>n</mi><mo>×</mo><mi>e</mi><mi>x</mi><mi>p</mi><mi>o</mi><mi>n</mi><mi>e</mi><mi>n</mi><mi>t</mi><mo>×</mo><mi>f</mi><mi>r</mi><mi>a</mi><mi>c</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">Value = sign \times exponent \times fraction
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.80952em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">e</span><span class="mord mathdefault">x</span><span class="mord mathdefault">p</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">a</span><span class="mord mathdefault">c</span><span class="mord mathdefault">t</span><span class="mord mathdefault">i</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span></span></span></span></span></p>
+<p>也就是浮点数的 <strong>实际值</strong> ，等于 符号位（sign bit）乘以 <strong>指数偏移值</strong> （exponent bias）再乘以 <strong>分数值</strong> （fraction）。</p>
+<p>二进制浮点数是以符号数值表示法的格式存储——最高有效位被指定为符号位（sign bit）；「指数部分」，即次高有效的 e 个位元，存储指数部分；最后剩下的 f 个低有效位的位元，存储「有效数」（significand）的小数部分（在非规约形式下整数部分默认为 0，其他情况下一律默认为 1）。</p>
+<h5 id="指数偏移值">指数偏移值</h5>
+<p>指数偏移值（exponent bias），即浮点数表示法中指数域的编码值，等于指数的实际值加上某个固定的值，IEEE 754 标准规定该固定值为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mrow><mi>e</mi><mo>−</mo><mn>1</mn></mrow></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2^{e-1} - 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">e</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> ，其中的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi></mrow><annotation encoding="application/x-tex">e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">e</span></span></span></span> 为存储指数的位元的长度。<br>
+以单精度浮点数为例，它的指数域是 8 个位元，固定偏移值是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mrow><mn>8</mn><mo>−</mo><mn>1</mn></mrow></msup><mo>−</mo><mn>1</mn><mo>=</mo><mn>128</mn><mo>−</mo><mn>1</mn><mo>=</mo><mn>127</mn></mrow><annotation encoding="application/x-tex">2^{8-1} - 1 = 128 - 1 = 127</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">8</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mord">2</span><span class="mord">8</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">2</span><span class="mord">7</span></span></span></span> 。此为有符号数的表示方式，单精度浮点数的指数部分实际取值是从 -126 到 127（-127 和 128 被用作特殊值处理，见 「<a href="https://zh.wikipedia.org/wiki/IEEE_754#%E9%9D%9E%E8%A7%84%E7%BA%A6%E5%BD%A2%E5%BC%8F%E7%9A%84%E6%B5%AE%E7%82%B9%E6%95%B0">非规约形式的浮点数</a>」和 「<a href="https://zh.wikipedia.org/wiki/IEEE_754#%E7%89%B9%E6%AE%8A%E5%80%BC">特殊值</a>」）。例如指数实际值为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msub><mn>7</mn><mn>10</mn></msub></mrow><annotation encoding="application/x-tex">17_{10}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.79444em;vertical-align:-0.15em;"></span><span class="mord">1</span><span class="mord"><span class="mord">7</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> ，在单精度浮点数中的指数域编码值为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>14</mn><msub><mn>4</mn><mn>10</mn></msub></mrow><annotation encoding="application/x-tex">144_{10}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.79444em;vertical-align:-0.15em;"></span><span class="mord">1</span><span class="mord">4</span><span class="mord"><span class="mord">4</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> ，即 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>14</mn><msub><mn>4</mn><mn>10</mn></msub><mo>=</mo><mn>1</mn><msub><mn>7</mn><mn>10</mn></msub><mo>+</mo><mn>12</mn><msub><mn>7</mn><mn>10</mn></msub></mrow><annotation encoding="application/x-tex">144_{10} = 17_{10} + 127_{10}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.79444em;vertical-align:-0.15em;"></span><span class="mord">1</span><span class="mord">4</span><span class="mord"><span class="mord">4</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.79444em;vertical-align:-0.15em;"></span><span class="mord">1</span><span class="mord"><span class="mord">7</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.79444em;vertical-align:-0.15em;"></span><span class="mord">1</span><span class="mord">2</span><span class="mord"><span class="mord">7</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 。<br>
+采用指数的实际值加上固定的偏移值的办法表示浮点数的指数，好处是可以用长度为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi></mrow><annotation encoding="application/x-tex">e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">e</span></span></span></span> 个位元的无符号整数来表示所有的指数取值，这使得两个浮点数的指数大小的比较更为容易，实际上可以按照字典次序比较两个浮点表示的大小。<br>
+这种 <strong>移码</strong> 表示的指数部分，中文称作 <strong>阶码</strong> 。</p>
+<h5 id="规约形式的浮点数">规约形式的浮点数</h5>
+<p>如果浮点数中指数部分的编码值在 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn><mo>&lt;</mo><mi>e</mi><mi>x</mi><mi>p</mi><mi>o</mi><mi>n</mi><mi>e</mi><mi>n</mi><mi>t</mi><mo>≤</mo><msup><mn>2</mn><mi>e</mi></msup><mo>−</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">0 &lt; exponent \le 2^{e} - 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68354em;vertical-align:-0.0391em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8304100000000001em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">e</span><span class="mord mathdefault">x</span><span class="mord mathdefault">p</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.747722em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">e</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span> 之间，且在 <strong>科学表示法</strong> 的表示方式下，分数（fraction）部分 <strong>最高有效位</strong> （即整数位）是 1，那么这个浮点数将被称为 <strong>规约形式的浮点数</strong>。“规约” 是指用唯一确定的浮点形式去表示一个值。<br>
+由于这种表示下的尾数有一位隐含的二进制有效数字（尾数第一位总是 1），为了与二进制科学计数法的尾数（mantissa）相区别，IEEE 754 称之为 <strong>有效数</strong>（significant）。<br>
+举例来说，双精度（64-bit）的规约形式浮点数在指数偏移值的值域为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>00000000001</mn></mrow><annotation encoding="application/x-tex">00000000001</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">1</span></span></span></span> (11-bit) 到 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>11111111110</mn></mrow><annotation encoding="application/x-tex">11111111110</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">0</span></span></span></span> ，在分数部分则是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>000</mn><mo>…</mo><mo>…</mo><mn>000</mn></mrow><annotation encoding="application/x-tex">000……000</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span></span></span></span> 到 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>111</mn><mo>…</mo><mo>…</mo><mn>111</mn></mrow><annotation encoding="application/x-tex">111……111</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span></span></span></span> （52-bit）。</p>
+<h5 id="非规约形式的浮点数">非规约形式的浮点数</h5>
+<p>如果浮点数的指数部分的编码值是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>，分数部分非零，那么这个浮点数将被称为 <strong>非规约形式的浮点数</strong>。一般是某个数字 <strong>相当</strong> 接近零时才会使用非规约形式来表示。IEEE 754 标准规定：<strong>非规约形式的浮点数的指数偏移值比规约形式的浮点数的指数偏移值小 1</strong>。例如，最小的规约形式的单精度浮点数的指数部分编码值为 1，指数的实际值为 -126；而非规约的单精度浮点数的指数域编码值为 0，对应的指数实际值也是 -126 而不是 -127。实际上非规约形式的浮点数仍然是有效可以使用的，只是它们的绝对值已经小于所有的规约浮点数的绝对值；即所有的非规约浮点数比规约浮点数更接近 0。<mark>规约浮点数的尾数大于等于 1 且小于 2，而非规约浮点数的尾数小于 1 且大于 0。</mark><br>
+除了规约浮点数，IEEE 754-1985 标准采用非规约浮点数，用来解决填补绝对值意义下最小规格数与零的距离。（举例说，正数下，最大的非规格数等于最小的规格数。而一个浮点数编码中，如果 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi><mi>x</mi><mi>p</mi><mi>o</mi><mi>n</mi><mi>e</mi><mi>n</mi><mi>t</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">exponent = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80952em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">e</span><span class="mord mathdefault">x</span><span class="mord mathdefault">p</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>，且尾数部分不为零，那么就按照非规约浮点数来解析）非规约浮点数源于 70 年代末 IEEE 浮点数标准化专业技术委员会酝酿浮点数二进制标准时，Intel 公司对 <strong>渐进式下溢出</strong> （gradual underflow）的力荐。当时十分流行 <a href="https://zh.wikipedia.org/wiki/DEC">DEC</a> <a href="https://zh.wikipedia.org/wiki/VAX">VAX</a> 机的浮点数表示采用了 <strong>突然式下溢出</strong> （abrupt underflow）。如果没有渐进式下溢出，那么 0 与绝对值最小的浮点数之间的距离（gap）将大于相邻的小浮点数之间的距离。例如单精度浮点数的绝对值最小的规约浮点数是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1.0</mn><mo>×</mo><msup><mn>2</mn><mrow><mo>−</mo><mn>126</mn></mrow></msup></mrow><annotation encoding="application/x-tex">1.0 \times 2^{-126}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mord">.</span><span class="mord">0</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span><span class="mord mtight">2</span><span class="mord mtight">6</span></span></span></span></span></span></span></span></span></span></span></span> ，它与绝对值次小的规约浮点数之间的距离为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mrow><mo>−</mo><mn>126</mn></mrow></msup><mo>×</mo><msup><mn>2</mn><mrow><mo>−</mo><mn>23</mn></mrow></msup><mo>=</mo><msup><mn>2</mn><mrow><mo>−</mo><mn>149</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2^{-126} \times 2^{-23} = 2^{-149}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span><span class="mord mtight">2</span><span class="mord mtight">6</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">2</span><span class="mord mtight">3</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span><span class="mord mtight">4</span><span class="mord mtight">9</span></span></span></span></span></span></span></span></span></span></span></span> 。如果不采用渐进式下溢出，那么绝对值最小的规约浮点数与 0 的距离是相邻的小浮点数之间距离的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mn>23</mn></msup></mrow><annotation encoding="application/x-tex">2^{23}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span></span> 倍，可以说是非常突然的下溢出到 0。这种情况的一种糟糕的后果是：两个不等的小浮点数 X 与 Y 相减，结果将是 0。训练有素的数值分析人员可能会适应这种限制情况，但对于普通的程序员就很容易陷入错误了。采用了渐进式下溢出后将不会出现这种情况。例如对于单精度浮点数，指数部分实际最小值是（-126），对应的尾数部分从 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1.1111</mn><mo>…</mo><mo>…</mo><mn>11</mn></mrow><annotation encoding="application/x-tex">1.1111……11</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">.</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mord">1</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1.1111</mn><mo>…</mo><mo>…</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">1.1111……10</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">.</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mord">0</span></span></span></span> 一直到 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0.0000</mn><mo>…</mo><mo>…</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">0.0000……10</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mord">0</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0.0000</mn><mo>…</mo><mo>…</mo><mn>01</mn></mrow><annotation encoding="application/x-tex">0.0000……01</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">0</span><span class="mord">1</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0.0000</mn><mo>…</mo><mo>…</mo><mn>00</mn></mrow><annotation encoding="application/x-tex">0.0000……00</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">0</span><span class="mord">0</span></span></span></span> 相邻两小浮点数之间的距离（gap）都是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mrow><mo>−</mo><mn>126</mn></mrow></msup><mo>×</mo><msup><mn>2</mn><mrow><mo>−</mo><mn>23</mn></mrow></msup><mo>=</mo><msup><mn>2</mn><mrow><mo>−</mo><mn>149</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2^{-126} \times 2^{-23} = 2^{-149}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span><span class="mord mtight">2</span><span class="mord mtight">6</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">2</span><span class="mord mtight">3</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span><span class="mord mtight">4</span><span class="mord mtight">9</span></span></span></span></span></span></span></span></span></span></span></span> ；而与 0 最近的浮点数（即最小的非规约数）也是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mrow><mo>−</mo><mn>126</mn></mrow></msup><mo>×</mo><msup><mn>2</mn><mrow><mo>−</mo><mn>23</mn></mrow></msup><mo>=</mo><msup><mn>2</mn><mrow><mo>−</mo><mn>149</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2^{-126} \times 2^{-23} = 2^{-149}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span><span class="mord mtight">2</span><span class="mord mtight">6</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">2</span><span class="mord mtight">3</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span><span class="mord mtight">4</span><span class="mord mtight">9</span></span></span></span></span></span></span></span></span></span></span></span>。</p>
+<h5 id="特殊值">特殊值</h5>
+<p>这里有三个特殊值需要指出：</p>
+<ol>
+<li>如果 <strong>指数</strong> 是 0 并且尾数的 <strong>小数部分</strong> 是 0，这个数是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>±</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\pm 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">±</span><span class="mord">0</span></span></span></span> （和符号位相关）</li>
+<li>如果 <strong>指数</strong> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>=</mo><msup><mn>2</mn><mi>e</mi></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">= 2^{e} - 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.747722em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">e</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 并且尾数的 <strong>小数部分</strong> 是 0，这个数是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>±</mo><mi mathvariant="normal">∞</mi></mrow><annotation encoding="application/x-tex">\pm \infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">±</span><span class="mord">∞</span></span></span></span> （同样和符号位相关）</li>
+<li>如果 <strong>指数</strong> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>=</mo><msup><mn>2</mn><mi>e</mi></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">= 2^{e} - 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.747722em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">e</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 并且尾数的 <strong>小数部分</strong> 非 0，这个数表示为 <a href="https://zh.wikipedia.org/wiki/NaN">非数</a> （NaN）。<br>
+以上规则，总结如下：</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>形式</th>
+<th>指数</th>
+<th>小数部分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>零</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>非正规形式</td>
+<td>0</td>
+<td>大于 0 小于 1</td>
+</tr>
+<tr>
+<td>正规形式</td>
+<td>1 到 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mi>e</mi></msup><mo>−</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">2^{e} - 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.747722em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">e</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span></td>
+<td>大于等于 1 小于 2</td>
+</tr>
+<tr>
+<td>无穷</td>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mi>e</mi></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2^{e} -1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.747722em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">e</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></td>
+<td>0</td>
+</tr>
+<tr>
+<td>NaN</td>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mi>e</mi></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2^{e} - 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.747722em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">e</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></td>
+<td>非 0</td>
+</tr>
+</tbody>
+</table>
+<h5 id="32-位单精度">32 位单精度</h5>
+<p>单精度二进制小数，使用 32 个位元存储。</p>
+<table>
+<thead>
+<tr>
+<th>比特长度</th>
+<th>名称</th>
+<th>比特编号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>S</td>
+<td>31</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Exp</td>
+<td>30 至 23 偏正值（实际的指数大小 +127）</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Fraction</td>
+<td>22 至 0 位编号（从右边开始为 0）</td>
+</tr>
+</tbody>
+</table>
+<p>S 为符号位，Exp 为指数位，Fraction 为有效数位。指数部分即使用所谓的 <strong>偏正值</strong> 形式表示，偏正值为实际的指数大小与一个固定值（32 位的情况是 127）的和。采用这种方式表示的目的是简化比较。因为，指数的值可能为正也可能为负，如果采用 <a href="https://zh.wikipedia.org/wiki/%E4%BA%8C%E8%A3%9C%E6%95%B8">二辅数</a> 表示的话，全体符号位 S 和 Exp 自身的符号位将导致不能简单的进行大小比较。正因为如此，指数部分通常采用一个无符号的正数值存储。单精度的指数部分是 -126 ～ +127 加上偏移值 127，指数值的大小从 1 ～ 254（0 和 255 是特殊值）。浮点小数计算时，指数值减去偏正值将是实际的指数大小。</p>
+<h5 id="64-位双精度">64 位双精度</h5>
+<p>双精度二进制小数，使用 64 个位元存储。</p>
+<table>
+<thead>
+<tr>
+<th>比特长度</th>
+<th>名称</th>
+<th>比特编号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>S</td>
+<td>63</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Exp</td>
+<td>62 至 52 偏正值（实际的指数大小 +1023）</td>
+</tr>
+<tr>
+<td>52</td>
+<td>Fraction</td>
+<td>51 至 0 位编号（从右边开始为 0）</td>
+</tr>
+</tbody>
+</table>
+<p>S 为符号位，Exp 为指数位，Fraction 为有效数位。指数部分即使用所谓的 <strong>偏正值</strong> 形式表示，偏正值为实际的指数大小与一个固定值（64 位的情况是 1023）的和。采用这种方式表示的目的是简化比较。因为，指数的值可能为正也可能为负，如果采用 <a href="https://zh.wikipedia.org/wiki/%E4%BA%8C%E8%A3%9C%E6%95%B8">二辅数</a> 表示的话，全体符号位 S 和 Exp 自身的符号位将导致不能简单的进行大小比较。正因为如此，指数部分通常采用一个无符号的正数值存储。双精度的指数部分是 -1022 ～ +1023 加上偏移值 1023，指数值的大小从 1 ～ 2046（0（二进位全为 0） 和 2047（二进位全为 1） 是特殊值）。浮点小数计算时，指数值减去偏正值将是实际的指数大小。</p>
+<hr>
+<h2 id="双精度浮点数">双精度浮点数</h2>
+<p>双精度浮点数（double）是计算机使用的一种 <a href="https://zh.wikipedia.org/wiki/%E8%B3%87%E6%96%99%E5%9E%8B%E5%88%A5">资料型别</a>。比起单精度浮点数，双精度浮点数使用 64 位（8 字节）来存储一个浮点数。它可以表示二进制位制的 53 位有效数字，其可以表示的数字的绝对值范围为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><msup><mn>2</mn><mrow><mo>−</mo><mn>1024</mn></mrow></msup><mo separator="true">,</mo><msup><mn>2</mn><mn>1024</mn></msup><mo>]</mo></mrow><annotation encoding="application/x-tex">[2^{-1024}, 2^{1024}]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span><span class="mord mtight">0</span><span class="mord mtight">2</span><span class="mord mtight">4</span></span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">0</span><span class="mord mtight">2</span><span class="mord mtight">4</span></span></span></span></span></span></span></span></span><span class="mclose">]</span></span></span></span>。</p>
+<h3 id="格式">格式</h3>
+<p>sign bit（符号）：用来表示正负号<br>
+exponent（指数）：用来表示次方数<br>
+mantissa（尾数）：用来表示精确度</p>
+<figure data-type="image" tabindex="2"><img src="https://cafe.summer.today/post-images/1663045887608.png" alt="" loading="lazy"></figure>
+<h3 id="符号">符号</h3>
+<p>0 代表指数为正（<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mo>−</mo><mn>1</mn><msup><mo>)</mo><mn>0</mn></msup><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">(-1)^{0} = 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">−</span><span class="mord">1</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>)，1 代表数值为负（<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mo>−</mo><mn>1</mn><msup><mo>)</mo><mn>1</mn></msup><mo>=</mo><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">(-1)^{1} = -1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">−</span><span class="mord">1</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord">1</span></span></span></span>)</p>
+<h3 id="指数">指数</h3>
+<p>共有 11 个位元，使用 「偏移表示法」，有两个例外分别为：</p>
+<ol>
+<li>「11 个位元皆为 0」</li>
+<li>「11个位元皆为 1」<br>
+并且以 1023 为偏移标准，表示实际指数为 0，因此指数范围为 -1022 到 +1023。<br>
+指数 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>00</mn><msub><mn>0</mn><mn>16</mn></msub></mrow><annotation encoding="application/x-tex">000_{16}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.79444em;vertical-align:-0.15em;"></span><span class="mord">0</span><span class="mord">0</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">6</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>7</mn><mi>f</mi><msub><mi>f</mi><mn>16</mn></msub></mrow><annotation encoding="application/x-tex">7ff_{16}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord">7</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">6</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 具有特殊意义：</li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0000000000</mn><msub><mn>0</mn><mn>2</mn></msub><mo>=</mo><mn>00</mn><msub><mn>0</mn><mn>16</mn></msub></mrow><annotation encoding="application/x-tex">00000000000_{2} = 000_{16}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.79444em;vertical-align:-0.15em;"></span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.79444em;vertical-align:-0.15em;"></span><span class="mord">0</span><span class="mord">0</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">6</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 当尾数为 0 时为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>±</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\pm 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">±</span><span class="mord">0</span></span></span></span>，尾数不为 0 时为非正规形式的浮点数。</li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1111111111</mn><msub><mn>1</mn><mn>2</mn></msub><mo>=</mo><mn>7</mn><mi>f</mi><msub><mi>f</mi><mn>16</mn></msub></mrow><annotation encoding="application/x-tex">11111111111_{2} = 7ff_{16}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.79444em;vertical-align:-0.15em;"></span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord"><span class="mord">1</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord">7</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">6</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 当尾数为 0 时为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∞</mi></mrow><annotation encoding="application/x-tex">\infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord">∞</span></span></span></span> ，尾数不为 0 时为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi><mi>a</mi><mi>N</mi></mrow><annotation encoding="application/x-tex">NaN</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span></span></span></span> 。</li>
+</ol>
+<h3 id="尾数">尾数</h3>
+<p>在二进位的 「科学记号」，数字被表示为：<br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1.</mn><mi>m</mi><mi>a</mi><mi>n</mi><mi>t</mi><mi>i</mi><mi>s</mi><mi>s</mi><mi>a</mi><mo>×</mo><msup><mn>2</mn><mrow><mi>e</mi><mi>x</mi><mi>p</mi><mi>o</mi><mi>n</mi><mi>e</mi><mi>n</mi><mi>t</mi></mrow></msup></mrow><annotation encoding="application/x-tex">1.mantissa \times 2^{exponent}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.74285em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mord">.</span><span class="mord mathdefault">m</span><span class="mord mathdefault">a</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mord mathdefault">s</span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.7935559999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7935559999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">e</span><span class="mord mathdefault mtight">x</span><span class="mord mathdefault mtight">p</span><span class="mord mathdefault mtight">o</span><span class="mord mathdefault mtight">n</span><span class="mord mathdefault mtight">e</span><span class="mord mathdefault mtight">n</span><span class="mord mathdefault mtight">t</span></span></span></span></span></span></span></span></span></span></span></span><br>
+二进位的 「科学记号」（<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mo>×</mo><msup><mn>2</mn><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">a \times 2^{n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.664392em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span></span></span></span></span></span></span></span>）的 a 的范围是大于等于 1 而小于 2，例如：</p>
+<ul>
+<li>二进制位的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>11.101</mn><mo>×</mo><msup><mn>2</mn><mn>1001</mn></msup></mrow><annotation encoding="application/x-tex">11.101 \times 2^{1001}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mord">1</span><span class="mord">.</span><span class="mord">1</span><span class="mord">0</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">0</span><span class="mord mtight">0</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span> 可以规格化为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1.1101</mn><mo>×</mo><msup><mn>2</mn><mn>1010</mn></msup></mrow><annotation encoding="application/x-tex">1.1101 \times 2^{1010}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mord">.</span><span class="mord">1</span><span class="mord">1</span><span class="mord">0</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">0</span><span class="mord mtight">1</span><span class="mord mtight">0</span></span></span></span></span></span></span></span></span></span></span></span>，存储时尾数只需要存储 1101 即可。</li>
+<li>二进制位的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0.00110011</mn><mo>×</mo><msup><mn>2</mn><mrow><mo>−</mo><mn>1001</mn></mrow></msup></mrow><annotation encoding="application/x-tex">0.00110011 \times 2^{-1001}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">0</span><span class="mord">0</span><span class="mord">1</span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">1</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span><span class="mord mtight">0</span><span class="mord mtight">0</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span> 可以规格化为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1.10011</mn><mo>×</mo><msup><mn>2</mn><mrow><mo>−</mo><mn>1100</mn></mrow></msup></mrow><annotation encoding="application/x-tex">1.10011 \times 2^{-1100}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mord">.</span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">1</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span><span class="mord mtight">1</span><span class="mord mtight">0</span><span class="mord mtight">0</span></span></span></span></span></span></span></span></span></span></span></span>，存储时尾数只需要存储 10011 即可。</li>
+</ul>
+<h3 id="小结">小结</h3>
+<p>根据以上的叙述，一个双精度浮点数所代表的数值为：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mo>−</mo><mn>1</mn><msup><mo>)</mo><mrow><mi>s</mi><mi>i</mi><mi>g</mi><mi>n</mi></mrow></msup><mo>×</mo><msup><mn>2</mn><mrow><mi>e</mi><mi>x</mi><mi>p</mi><mi>o</mi><mi>n</mi><mi>e</mi><mi>n</mi><mi>t</mi></mrow></msup><mo>×</mo><mn>1.</mn><mi>m</mi><mi>a</mi><mi>n</mi><mi>t</mi><mi>i</mi><mi>s</mi><mi>s</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">(-1)^{sign} \times 2^{exponent} \times 1.mantissa
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.124664em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">−</span><span class="mord">1</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.874664em;"><span style="top:-3.1130000000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">s</span><span class="mord mathdefault mtight">i</span><span class="mord mathdefault mtight" style="margin-right:0.03588em;">g</span><span class="mord mathdefault mtight">n</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.926886em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.843556em;"><span style="top:-3.1130000000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">e</span><span class="mord mathdefault mtight">x</span><span class="mord mathdefault mtight">p</span><span class="mord mathdefault mtight">o</span><span class="mord mathdefault mtight">n</span><span class="mord mathdefault mtight">e</span><span class="mord mathdefault mtight">n</span><span class="mord mathdefault mtight">t</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">.</span><span class="mord mathdefault">m</span><span class="mord mathdefault">a</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mord mathdefault">s</span><span class="mord mathdefault">a</span></span></span></span></span></p>
+<hr>
+<h2 id="位运算取整">位运算取整</h2>
+<p>React expirationTime 源码中使用 <code>| 0</code> 按位或 操作取整。<br>
+JavaScript 位运算符只对整数起作用，如果一个运算子不是整数，会自动转为整数后再执行。虽然在 JavaScript 内部，数值都是以 64 位浮点数的形式存储，但是做位运算的时候，是以 32 位有符号的整数进行运算的，并且返回值也是一个 32 位有符号的整数。最后再将结果转换为 64 位浮点数。</p>
+<h2 id="参考">参考</h2>
+<p>[1]: <a href="https://zh.wikipedia.org/wiki/IEEE_754">IEEE 754</a><br>
+[2]: <a href="https://zh.wikipedia.org/wiki/%E9%9B%99%E7%B2%BE%E5%BA%A6%E6%B5%AE%E9%BB%9E%E6%95%B8">双精度浮点数</a><br>
+[3]: <a href="https://www.jianshu.com/p/5760d471715a">如何手算十进制浮点数转二进制(IEEE754-32位)浮点数</a><br>
+[4]: <a href="https://www.cnblogs.com/onepixel/p/5140944.html">细说 JavaScript 七种数据类型</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[React Native TextInput iOS pick “choose my own password” but value not cleared]]></title>
+        <id>https://cafe.summer.today/post/react-native-textinput-ios-pick-choose-my-own-password-but-value-not-cleared/</id>
+        <link href="https://cafe.summer.today/post/react-native-textinput-ios-pick-choose-my-own-password-but-value-not-cleared/">
+        </link>
+        <updated>2022-09-07T06:33:41.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="问题解决">问题解决</h3>
+<pre><code class="language-jsx">// Add in your TextInput the props &quot;onEndEditing&quot;
+&lt;TextInput {...} onEndEditing={(event) =&gt; {
+		if (event.nativeEvent.text.length === 0) {
+			this.setState({
+				password: '',
+			});
+		}
+	}}
+ /&gt;
+</code></pre>
+<pre><code class="language-jsx">// Add in my custom FormikTextInput
+const FormikTextInput = ({ name, ...props }) =&gt; {
+	const [field, meta, helpers] = useField(name);
+	const showError = meta.touched &amp;&amp; meta.error;
+
+	return (
+		&lt;View style={styles.view}&gt;
+			&lt;TextInput
+				onChangeText={(value) =&gt; helpers.setValue(value)}
+				onBlur={() =&gt; helpers.setTouched(true)}
+				value={field.value}
+				error={showError}
+				{...props}
+				onEndEditing={(event) =&gt; {
+					if (event.nativeEvent.text.length === 0) {
+						helpers.setValue('');
+					}
+				}}
+			/&gt;
+			{showError &amp;&amp; &lt;Text style={styles.errorText}&gt;{meta.error}&lt;/Text&gt;}
+		&lt;/View&gt;
+	);
+};
+</code></pre>
+<h3 id="参考">参考</h3>
+<p>[1]: <a href="https://github.com/facebook/react-native/issues/23921">iOS &quot;Choose My Own Password&quot; not calling onChange #23921</a>.</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[React 子组件调用 useContext 或通过 props 改变父组件状态引起所有子组件的重新渲染]]></title>
+        <id>https://cafe.summer.today/post/react-zi-zu-jian-diao-yong-usecontext-huo-tong-guo-props-gai-bian-fu-zu-jian-zhuang-tai-yin-qi-suo-you-zi-zu-jian-de-chong-xin-xuan-ran/</id>
+        <link href="https://cafe.summer.today/post/react-zi-zu-jian-diao-yong-usecontext-huo-tong-guo-props-gai-bian-fu-zu-jian-zhuang-tai-yin-qi-suo-you-zi-zu-jian-de-chong-xin-xuan-ran/">
+        </link>
+        <updated>2022-09-03T05:04:35.000Z</updated>
+        <content type="html"><![CDATA[<ul>
+<li>React Native 项目。</li>
+<li>Search 子组件在输入内容时调用父组件的 setOrder 导致数据改变引起所有子组件的重新渲染。</li>
+<li>改变的数据与 Search 组件无关。</li>
+<li>相关的方法有:
+<ul>
+<li>使用 <code>React.memo</code> 包装子组件，eg: <code>export default React.memo(MyComponent)</code></li>
+<li>class component 使用 <code>React.PureComponent</code></li>
+<li>class component 使用 <code>shouldComponentUpdate</code> 阻止渲染</li>
+<li>使用 <code>React.useMemo</code> 包装子组件的 <code>return</code> 内容</li>
+</ul>
+</li>
+<li>针对该项目做了很多尝试，fullstackopen 练习中提到：</li>
+</ul>
+<blockquote>
+<p>You probably face an issue that the text input component loses focus after each keystroke. This is because the content provided by the ListHeaderComponent prop is constantly unmounted. This can be fixed by turning the component rendering the FlatList component into a class component and defining the header's render function as a class.</p>
+</blockquote>
+<ul>
+<li>使用 class 组件替代 function 组件的实现，不需要进行其他改变。</li>
+</ul>
+<pre><code class="language-jsx">export class RepositoryListContainer extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.renderHeader = this.renderHeader.bind(this);
+	}
+
+	handlePress(id) {
+		this.props.navigate(`/repository/${id}`);
+	}
+
+	// 将 ListHeaderComponent 的渲染函数定义为类方法
+    // 使用 context：
+	renderHeader() {
+		return &lt;RepositoryListHeader /&gt;;
+	}
+
+	// 或者使用 props：
+	renderHeader() {
+		const props = this.props;
+		return (
+			&lt;RepositoryListHeader
+				...props
+			/&gt;
+		)
+	}
+
+	render() {
+		// Get the nodes from the edges array
+		const repositoryNodes = this.props.repositories
+			? this.props.repositories?.edges?.map((edge) =&gt; edge.node)
+			: [];
+
+		return (
+			&lt;FlatList
+				data={repositoryNodes}
+				renderItem={({ item }) =&gt; (
+					&lt;Pressable onPress={this.handlePress.bind(this, item.id)}&gt;
+						&lt;RepositoryItem item={item} /&gt;
+					&lt;/Pressable&gt;
+				)}
+				ItemSeparatorComponent={ItemSeparator}
+				keyExtractor={(item) =&gt; item.id}
+				ListHeaderComponent={this.renderHeader}
+			/&gt;
+		);
+	}
+}
+</code></pre>
+<ul>
+<li>然后根据上面 class 组件的原理，我尝试了使用 function 组件和 useMemo 实现同样的功能。</li>
+</ul>
+<pre><code class="language-jsx">export const RepositoryListContainer = ({ repositories }) =&gt; {
+	const navigate = useNavigate();
+	// Get the nodes from the edges array
+	const repositoryNodes = repositories
+		? repositories?.edges?.map((edge) =&gt; edge.node)
+		: [];
+	
+	const handlePress = (id) =&gt; {
+		navigate(`/repository/${id}`);
+	};
+
+	// 使用 useMemo 返回一个 memoized 值
+	const renderHeader = useMemo(() =&gt; {
+		return &lt;RepositoryListHeader /&gt;
+	}, [])
+
+	return (
+		&lt;FlatList
+			data={repositoryNodes}
+			renderItem={({ item }) =&gt; (
+				&lt;Pressable onPress={() =&gt; handlePress(item.id)}&gt;
+					&lt;RepositoryItem item={item} /&gt;
+				&lt;/Pressable&gt;
+			)}
+			ItemSeparatorComponent={ItemSeparator}
+			keyExtractor={(item) =&gt; item.id}
+			ListHeaderComponent={renderHeader}
+		/&gt;
+	);
+};
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[React Native Flatlist 下拉刷新获取 Apollo 新数据]]></title>
+        <id>https://cafe.summer.today/post/react-native-flatlist-xia-la-shua-xin-huo-qu-apollo-xin-shu-ju/</id>
+        <link href="https://cafe.summer.today/post/react-native-flatlist-xia-la-shua-xin-huo-qu-apollo-xin-shu-ju/">
+        </link>
+        <updated>2022-09-02T06:33:12.000Z</updated>
+        <content type="html"><![CDATA[<ul>
+<li>apollo/client useQuery 更新数据使用 updateQuery 回调，刷新数据使用 refetch()。</li>
+<li>已知 useCreateReview 会调用 useMutation 的 refetchQueries 更新 GET_REVIEWS 缓存，也就是说此时 useReviews 的数据已经更新，需要重新获取，所以要使用 refetch。</li>
+</ul>
+<pre><code class="language-jsx">const SingleRepository = () =&gt; {
+	const me = useUser();
+	const { id } = useParams();
+	const { repository } = useRepository(id);
+	const { reviews, refetch } = useReviews(id); // get refetch callback
+	const [isFetching, setIsFetching] = useState(false); // set fetch state
+
+	const onRefresh = async () =&gt; {
+		setIsFetching(true);
+		await refetch(); // refetch data
+		setIsFetching(false);
+	};
+
+	const repositoryItem = repository ?? {};
+	const reviewsItems = reviews ?? [];
+
+	return (
+		&lt;KeyboardAvoidingView
+			behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+			style={{ flex: 1 }}
+		&gt;
+			&lt;TouchableWithoutFeedback onPress={Keyboard.dismiss}&gt;
+				&lt;FlatList
+					data={reviewsItems}
+					renderItem={({ item }) =&gt; &lt;ReviewItem review={item} /&gt;}
+					keyExtractor={({ id }) =&gt; id}
+					ItemSeparatorComponent={ItemSeparator}
+					extraData={status}
+					onRefresh={onRefresh} {/* use onRefresh */}
+					refreshing={isFetching} {/* set refreshing state */}
+					ListHeaderComponent={() =&gt; (
+						&lt;&gt;
+							&lt;RepositoryInfo item={repositoryItem} /&gt;
+							&lt;ItemSeparator /&gt;
+						&lt;/&gt;
+					)}
+					ListFooterComponent={() =&gt;
+						me &amp;&amp; (
+							&lt;&gt;
+								&lt;ItemSeparator /&gt;
+								&lt;Review
+									fullName={repositoryItem?.fullName}
+									setStatus={setStatus}
+								/&gt;
+							&lt;/&gt;
+						)
+					}
+					contentContainerStyle={{
+						justifyContent: 'space-around',
+					}}
+				/&gt;
+			&lt;/TouchableWithoutFeedback&gt;
+		&lt;/KeyboardAvoidingView&gt;
+	);
+};
+</code></pre>
+<h2 id="参考">参考</h2>
+<p>[1]: <a href="https://www.albertgao.xyz/2019/09/16/how-to-update-apollo-cache-via-react-hooks-after-calling-REST-api/">How to update Apollo Cache via React Hooks after calling REST api</a><br>
+[2]: <a href="https://thewebdev.info/2022/02/19/how-to-implement-pull-to-refresh-flatlist-with-react-native/">How to implement pull to refresh FlatList with React Native?</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[React Native 键盘弹起遮挡 TextInput 问题]]></title>
+        <id>https://cafe.summer.today/post/react-native-jian-pan-dan-qi-zhe-dang-textinput-wen-ti/</id>
+        <link href="https://cafe.summer.today/post/react-native-jian-pan-dan-qi-zhe-dang-textinput-wen-ti/">
+        </link>
+        <updated>2022-09-01T12:50:50.000Z</updated>
+        <content type="html"><![CDATA[<ul>
+<li>KeyboardAvoidingView 元素应该放在当前页面组件的最外层。</li>
+<li>注意设置 flex 属性，以及 inner 元素的 justifyContent 属性。</li>
+<li>参考：
+<ul>
+<li><a href="https://medium.com/@nickopops/keyboardavoidingview-not-working-properly-c413c0a200d4">KeyboardAvoidingView not working properly? Check your Flexbox Layout first</a></li>
+<li><a href="https://blog.caoweiju.com/2019/07/21/rn%E5%9C%A8%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91%E7%82%B9%E5%92%8C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">RN在开发中的一些坑点和注意事项</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>KeyboardAvoidingView 元素中使用 TextInput with multiline 时会失效（这个问题出现在 iOS）。</li>
+<li>这个问题从 17 年到目前依然没有很好的解决方案，从 issue 中选择了一种：</li>
+</ul>
+<pre><code class="language-jsx">import React from &quot;react&quot;;
+import { Keyboard } from &quot;react-native&quot;;
+
+const Component = () =&gt; {
+  const [isScrollEnabled, setIsScrollEnabled] = React.useState(true);
+  
+  function onKeyboardWillShow() {
+    setIsScrollEnabled(false);
+  }
+
+  function onKeyboardDidShow() {
+    setIsScrollEnabled(true);
+  }
+
+  React.useEffect(() =&gt; {
+    const subKWS = Keyboard.addListener(&quot;keyboardWillShow&quot;, onKeyboardWillShow);
+    const subKDS = Keyboard.addListener(&quot;keyboardDidShow&quot;, onKeyboardDidShow);
+
+    return () =&gt; {
+      subKWS.remove();
+      subKDS.remove();
+    };
+  }, []);
+  
+  return (
+    &lt;TextInput style={{ maxHeight: 180 }} scrollEnabled={isScrollEnabled} multiline&gt;
+  );
+}; 
+</code></pre>
+<ul>
+<li>当然各种解决方案都有优点也都有各自的缺陷，这种方式也不例外。</li>
+<li>参考：
+<ul>
+<li><a href="https://github.com/facebook/react-native/issues/16826">KeyboardAvoidingView has no effect on multiline TextInput #16826</a></li>
+</ul>
+</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Jest 测试含有 useNavigate() 的组件报错]]></title>
+        <id>https://cafe.summer.today/post/jest-ce-shi-han-you-usenavigate-de-zu-jian-bao-cuo/</id>
+        <link href="https://cafe.summer.today/post/jest-ce-shi-han-you-usenavigate-de-zu-jian-bao-cuo/">
+        </link>
+        <updated>2022-08-31T17:14:49.000Z</updated>
+        <content type="html"><![CDATA[<ul>
+<li>渲染组件的时候 Jest 提示报错<br>
+<img src="https://cafe.summer.today/post-images/1662656704265.png" alt="" loading="lazy"></li>
+<li>但是没有具体的错误原因说明，按照建议中的<a href="https://reactjs.org/link/error-boundaries">添加错误边界</a>查找错误原因。</li>
+<li>在 utils 目录中新建 errorBoundary.js 文件，写入内容：</li>
+</ul>
+<pre><code class="language-js">import React from 'react';
+
+class ErrorBoundary extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = { hasError: false };
+	}
+
+	static getDerivedStateFromError(error) {
+		// Update state so the next render will show the fallback UI.
+		return { hasError: true };
+	}
+
+	componentDidCatch(error, errorInfo) {
+		// You can also log the error to an error reporting service
+		logErrorToMyService(error, errorInfo);
+	}
+
+	render() {
+		if (this.state.hasError) {
+			// You can render any custom fallback UI
+			return &lt;h1&gt;Something went wrong.&lt;/h1&gt;;
+		}
+
+		return this.props.children;
+	}
+}
+
+export default ErrorBoundary;
+</code></pre>
+<ul>
+<li>在测试出错的组件中加入 <em>ErrorBoundary</em>。</li>
+</ul>
+<pre><code class="language-jsx">import ErrorBoundary from '../utils/errorBoundary';
+
+export const SignInContainer = ({ signIn }) =&gt; {
+	const navigate = useNavigate();
+
+	// ...
+	
+	return (
+		&lt;ErrorBoundary&gt;
+			&lt;Formik
+				initialValues={initialValues}
+				validationSchema={validationSchema}
+				onSubmit={onSubmit}
+			&gt;
+				{({ handleSubmit }) =&gt; &lt;SignInForm onSubmit={handleSubmit} /&gt;}
+			&lt;/Formik&gt;
+		&lt;/ErrorBoundary&gt;
+	);
+}
+</code></pre>
+<ul>
+<li>再次测试，显示出错误原因：<br>
+<img src="https://cafe.summer.today/post-images/1662656680544.png" alt="" loading="lazy"></li>
+<li>useNavigate() 只能在 <code>&lt;Router&gt;</code> 组件的上下文中使用。</li>
+<li>因为在测试 render 时，组件本身不处于 Router 上下文中，所以报错。需要在测试文件中加入 Router。</li>
+</ul>
+<pre><code class="language-jsx">import { NativeRouter } from 'react-router-native';
+
+describe('SignIn', () =&gt; {
+	describe('SignInContainer', () =&gt; {
+		it('calls onSubmit function with correct arguments when a valid form is submitted', async () =&gt; {
+			const signIn = jest.fn();
+			const { debug, getByPlaceholderText, getByText } = render(
+				&lt;NativeRouter&gt;    {/* this tag */}
+					&lt;SignInContainer signIn={signIn} /&gt;
+				&lt;/NativeRouter&gt;
+			);
+			
+			// ...
+			
+		});
+	});
+});
+</code></pre>
+<h2 id="参考">参考</h2>
+<p>[1]: <a href="https://bobbyhadz.com/blog/react-jest-usenavigate-may-only-be-used-in-the-context-of-router">(Jest) useNavigate() may be used only in the context of a Router component</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Axios 获取 Github API 报错]]></title>
+        <id>https://cafe.summer.today/post/axios-huo-qu-github-api-bao-cuo/</id>
+        <link href="https://cafe.summer.today/post/axios-huo-qu-github-api-bao-cuo/">
+        </link>
+        <updated>2022-08-30T13:28:35.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="背景">背景</h2>
+<ul>
+<li>配置后端 API <a href="https://github.com/fullstack-hy2020/rate-repository-api">rate-repository-api</a> 。</li>
+</ul>
+<h2 id="问题">问题</h2>
+<ul>
+<li>node 切换多个 16.x 版本，使用 npm 依然报错。切换 yarn 后正常。</li>
+<li>按照项目的 README 文件进行配置。</li>
+<li><code>yarn start</code> 5000 端口冲突（系统级应用 ClientControl），换为 6000 端口，浏览器提示无法访问，经查是 Chrome 默认对一些端口设置了不安全。改为 5001 端口可以访问。但获取不到数据。</li>
+<li>打印报错信息：<br>
+<img src="https://cafe.summer.today/post-images/1662657815849.png" alt="" loading="lazy"></li>
+<li>发现 axios 使用了代理端口，关闭代理依然报错。</li>
+<li>找到两篇相关文章：<a href="https://segmentfault.com/a/1190000039412894">axios访问国外接口</a> 、<a href="https://janmolak.com/node-js-axios-behind-corporate-proxies-8b17a6f31f9d">Node.js Axios behind corporate proxies</a> 。</li>
+<li>通过使用 <a href="https://www.npmjs.com/package/tunnel">tunnel</a> 创建一个 HTTPS-over-HTTP tunnel，可以正常访问。</li>
+</ul>
+<pre><code class="language-js">import * as tunnel from 'tunnel';
+
+const agent = tunnel.httpsOverHttp({
+	proxy: {
+		host: '127.0.0.1',
+		port: 7890,
+	}
+});
+
+axios.request({
+	url: 'https://THE_API_YOU_WANT_ACCESS',
+	method: 'get',
+	httpsAgent: agent,
+	proxy: false,  // 设置 axios 不要自动检测命令行代理
+})
+</code></pre>
+]]></content>
+    </entry>
+</feed>

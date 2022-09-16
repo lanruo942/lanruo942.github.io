@@ -1,0 +1,344 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Summer Lee</title>
+<link rel="shortcut icon" href="https://cafe.summer.today/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://cafe.summer.today/media/css/tailwind.css">
+<link rel="stylesheet" href="https://cafe.summer.today/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Summer Lee - Atom Feed" href="https://cafe.summer.today/atom.xml">
+
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EX4CEGLQEE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-EX4CEGLQEE');
+  </script>
+    
+
+  <meta name="description" content="Done is better than perfect." />
+</head>
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+
+    <div class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300" :class="{ 'scroll': scrolled }">
+  <div class="flex justify-end px-4">
+    <div class="w-8 h-8 flex justify-center items-center rounded-full md:hidden" @click="showMenu = !showMenu">
+      <i class="ri-close-line" v-show="showMenu"></i>
+      <i class="ri-menu-3-line" v-show="!showMenu"></i>
+    </div>
+  </div>
+  <nav class="max-w-4xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block" :class="`${ showMenu ? 'block' : 'hidden' }`">
+    
+      <a href="/" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        首页
+      </a>
+    
+      <a href="/archives" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        归档
+      </a>
+    
+      <a href="/tags" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        标签
+      </a>
+    
+      <a href="/post/about" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        关于
+      </a>
+    
+    <a href="https://cafe.summer.today/atom.xml" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+      RSS
+    </a>
+  </nav>
+</div>
+
+    <div class="max-w-4xl w-full mx-auto pt-32">
+      
+
+      <div class="shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
+        
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://cafe.summer.today/post/code-server-pei-zhi/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          code-server 配置
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2020-06-22</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        
+
+前往 Github页面，下载对应的 release 版本：wget httpxxxxxxx。解压： tar -xvf code-server-3.4.1-linux-x86_64.tar.gz ； ./code-server 运行。
+
+...
+      </div>
+      <a href="https://cafe.summer.today/post/code-server-pei-zhi/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://cafe.summer.today/post/blink-shell-shi-yong/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          Blink Shell 使用
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2020-06-21</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        $19.99购买，安装。
+可以自定义 Theme 和 Font Style 等。
+Theme` 选择了 `Vibrantlnk
+
+字体选了 Fira Code
+Font Size: 12px
+External Display Font Si...
+      </div>
+      <a href="https://cafe.summer.today/post/blink-shell-shi-yong/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://cafe.summer.today/post/cloudflare-hsts-pei-zhi/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          Cloudflare HSTS 配置
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2020-04-09</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        
+HTTP严格传输安全（英語：HTTP Strict Transport Security，縮寫：HSTS）是一套由互联网工程任务组发布的互联网安全策略机制。 网站可以选择使用HSTS策略，来让浏览器强制使用 HTTPS 与网站进行通信，以...
+      </div>
+      <a href="https://cafe.summer.today/post/cloudflare-hsts-pei-zhi/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://cafe.summer.today/post/js-yin-le-qie-huan/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          JS 音乐切换
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2020-03-27</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        
+说明：原生JS，没有用 JQuery 等框架。
+
+HTML
+&lt;div id=&quot;audio-wrapper&quot;&gt;
+    &lt;div id=&quot;image-box&quot;&gt;
+       ...
+      </div>
+      <a href="https://cafe.summer.today/post/js-yin-le-qie-huan/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://cafe.summer.today/post/kkbox-sdk-shi-yong/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          kkbox sdk 使用
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2020-03-21</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        
+
+参考kkbox open API文档
+
+
+通过KKBOX开发者网站创建新APP，获得ID和Secret。
+
+
+通过KKBOX OAuth 2.0 Token API填入
+grant_type: client_credentials
+cl...
+      </div>
+      <a href="https://cafe.summer.today/post/kkbox-sdk-shi-yong/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://cafe.summer.today/post/mou-xiang-mu-swf-zhuan-html5-guo-cheng/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          某项目 swf 转 html5 过程
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2020-03-21</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        swf反编译
+
+
+客户需求是将swf动画文件作修改，内容替换成中文。
+
+
+考虑到现代浏览器默认禁用flash插件，决定尝试转换成 html5。
+
+
+源 swf[1] 文件地址：HpfHydraulicPresses
+
+
+由于swf文件是导出...
+      </div>
+      <a href="https://cafe.summer.today/post/mou-xiang-mu-swf-zhuan-html5-guo-cheng/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://cafe.summer.today/post/hua-shuo-lu-you-qi-wen-jian-gong-xiang-kua-yu-wen-ti-zong-jie/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          华硕路由器文件共享跨域问题总结
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2019-04-03</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        需求及问题
+
+需要存储10GB左右的原型图
+需要用版本控制
+Coding 最高会员的存储容量只有 5GB
+
+工具
+
+现有ASUS AC86u 路由器一台
+固件版本为梅林改版固件384.9
+一块机械硬盘
+
+网络情况
+所有电脑有线连接至 TP-...
+      </div>
+      <a href="https://cafe.summer.today/post/hua-shuo-lu-you-qi-wen-jian-gong-xiang-kua-yu-wen-ti-zong-jie/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://cafe.summer.today/post/hello-gridea/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          Hello Gridea
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2018-12-12</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+
+      </div>
+      <a href="https://cafe.summer.today/post/hello-gridea/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://cafe.summer.today/post-images/hello-gridea.png" alt="Hello Gridea">
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://cafe.summer.today/post/javascript-zhong-undefined-yu-null-de-qu-bie/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          JavaScript 中 undefined 与 null 的区别
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2017-11-03</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <p>大多数计算机语言，有且仅有一个表示“无”的值，比如，C 语言的 NULL，Java 语言的 null，Python 语言的 None，Ruby 语言的 nil。</p>
+<p>奇怪的是，JavaScript 语言居然有两个表示“无”的值：undefined 和 null。</p>
+
+      </div>
+      <a href="https://cafe.summer.today/post/javascript-zhong-undefined-yu-null-de-qu-bie/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://cafe.summer.today/post/mac-xia-laradock-pei-zhi-ji-lu/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          Mac 下 Laradock 配置记录
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2017-08-23</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <h3 id="laradock简介">LaraDock简介</h3>
+<p>LaraDock致力于简化创建<a href="http://laravelacademy.org/tags/%e5%bc%80%e5%8f%91%e7%8e%af%e5%a2%83">开发环境</a>过程，能够帮你在<a href="http://laravelacademy.org/tags/docker">Docker</a>上快速搭建<a href="http://laravelacademy.org/tags/laravel">Laravel</a>应用。 就像Laravel <a href="http://laravelacademy.org/tags/homestead">Homestead</a>一样，只不过用Docker替换了<a href="http://laravelacademy.org/tags/vagrant">Vagrant</a>。它预包装了Docker镜像，为我们提供了一站式的开发环境，而不需要再去在本地机器<a href="http://laravelacademy.org/tags/%e5%ae%89%e8%a3%85">安装</a>PHP、Nginx、MySQL以及其他任何开发过程中需要的软件。</p>
+
+      </div>
+      <a href="https://cafe.summer.today/post/mac-xia-laradock-pei-zhi-ji-lu/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+  
+      </div>
+
+      
+  <div class="my-4 flex justify-between px-4 md:px-0">
+    
+      <a href="https://cafe.summer.today/page/2/" class="btn btn-white">
+        <i class="ri-arrow-left-line mr-4"></i>
+        上一页
+      </a>
+    
+    
+      <a href="https://cafe.summer.today/page/4/" class="btn btn-white">
+        下一页
+        <i class="ri-arrow-right-line ml-4"></i>
+      </a>
+    
+  </div>
+
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+</footer>
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cafe.summer.today/media/scripts/main.js"></script>
+</body>
+
+</html>
